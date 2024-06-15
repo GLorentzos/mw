@@ -618,7 +618,6 @@ input[type="checkbox"]:checked ~ .menu-btn span:after {
 
   .sparks {
     position: absolute;
-    width: 1200px;
     left: 50%;
     margin-left: -600px;
     bottom: 0;
