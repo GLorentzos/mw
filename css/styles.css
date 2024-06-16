@@ -1074,6 +1074,6 @@ border-radius: 5px;
         .social-nav-link:hover {
             color: #fff;
             background-color: #d52b14;
-            border-radius: 50%;
+            border-radius: 20%;
             animation: pulse 0.5s ease-in-out;
         }
