@@ -231,6 +231,39 @@
     });
   
   </script>
+      <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var bandoModal = document.getElementById("bandoModal");
+    var diyModal = document.getElementById("diyuModal");
+    var bandoBtn = document.querySelector(".bando");
+    var diyBtn = document.querySelector(".diyu");
+    var spans = document.querySelectorAll(".modal .close");
+
+    bandoBtn.onclick = function(event) {
+      event.preventDefault();
+      bandoModal.style.display = "block";
+    }
+
+    diyBtn.onclick = function(event) {
+      event.preventDefault();
+      diyModal.style.display = "block";
+    }
+
+    spans.forEach(function(span) {
+      span.onclick = function() {
+        bandoModal.style.display = "none";
+        diyModal.style.display = "none";
+      }
+    });
+
+    window.onclick = function(event) {
+      if (event.target == bandoModal || event.target == diyModal) {
+        bandoModal.style.display = "none";
+        diyModal.style.display = "none";
+      }
+    }
+  });
+</script>
 <div id="puipModal" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
