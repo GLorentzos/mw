@@ -162,6 +162,65 @@
             </li>
         </ul>
     </div>
+      <!-- Modal Structure for playh or unlockip -->
+<div id="puipModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 style="font-size: 41px;">ALERT</h2>
+    <h2 style="font-size: 25px;">THE SERVER IS UNDER DEVELOPMENT!</h2>
+  </div>
+</div>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+      var puipModal = document.getElementById("puipModal");
+      var puipLink = document.getElementById("puipLink");
+      var playNowBtn = document.getElementById("playNowBtn");
+      var unlockIpBtn = document.getElementById("unlockIpBtn");
+  
+      // Function to open puipModal
+      function openPuipModal() {
+        puipModal.style.display = "block";
+      }
+  
+      // Add click event listener to puipLink
+      if (puipLink) {
+        puipLink.addEventListener('click', function(event) {
+          event.preventDefault(); // Prevent the default behavior of the link
+          openPuipModal();
+        });
+      }
+  
+      // Add click event listener to playNowBtn
+      playNowBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default behavior of the button
+        openPuipModal();
+      });
+  
+      // Add click event listener to unlockIpBtn
+      unlockIpBtn.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default behavior of the button
+        openPuipModal();
+      });
+  
+      // Close modal functionality
+      var closeButtons = document.querySelectorAll(".modal .close");
+  
+      closeButtons.forEach(function(closeButton) {
+        closeButton.addEventListener('click', function() {
+          puipModal.style.display = "none";
+        });
+      });
+  
+      // Close modal if clicked outside of it
+      window.addEventListener('click', function(event) {
+        if (event.target === puipModal) {
+          puipModal.style.display = "none";
+        }
+      });
+    });
+  
+  </script>
       <main>
          <div class="rules-container">
             <div class="category">
