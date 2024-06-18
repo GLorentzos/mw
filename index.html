@@ -99,6 +99,42 @@
          color: white;
          font-size: 10px;
          }
+
+         .sticky-section {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            z-index: 1000;
+        }
+        .nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .nav-item {
+            font-size: 1.5em;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #000;
+        }
+        .nav-link:hover {
+            color: #007bff; /* Change color on hover */
+        }
+
+        
       </style>
    </head>
    <body>
@@ -115,14 +151,14 @@
             <nav class="main-nav">
                <ul>
                   <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> <span class="icon-text">Αρχική</span></a></li>
-                  <li class="nav-item"><a class="nav-link" href="fivem://connect/ip"><i class="fas fa-play"></i> <span class="icon-text">Παίξε τώρα</span></a></li>
+                  <li class="nav-item"><a id="puipLink" class="nav-link" href="fivem://connect/ip"><i class="fas fa-play"></i> <span class="icon-text">Παίξε τώρα</span></a></li>
                   <li class="nav-item"><a class="nav-link" href="rules.html"><i class="fas fa-book"></i> <span class="icon-text">Κανόνες</span></a></li>
+                  <li class="nav-item"><a class="nav-link" href="donates.html"><i class="fas fa-donate"></i> <span class="icon-text">Donates</span></a></li>
                </ul>
             </nav>
          </div>
       </header>
-
-          <div class="social-section">
+      <div class="social-section">
         <ul class="social-nav">
             <li class="social-nav-item">
                 <a class="social-nav-link" href="https://www.instagram.com/mostwanted_roleplay">
@@ -146,11 +182,12 @@
             </li>
         </ul>
     </div>
-      
+
       <section class="home" id="home">
+         <div class="wrap">  
          <div class="slide-container active">
           <picture>
-            <img src="img/logo.webp" class="home-logo" alt="logo" draggable="false" loading="lazy">
+            <img src="img/logo2.webp" class="home-logo" alt="logo" draggable="false" loading="lazy" style="height: 440px;">
             <div class="sparks">
               <div class="spark spark_1"></div>
               <div class="spark spark_2"></div>
@@ -160,9 +197,12 @@
         </picture>        
          </div>
          </div>
+
+ 
+
          <div class="discord-btn-container">
-            <button class="play-btn">ΠΑΙΞΕ ΤΩΡΑ</button>
-            <button class="play-btn">UNLOCK IP</button>
+          <button class="play-btn" id="playNowBtn">ΠΑΙΞΕ ΤΩΡΑ</button>
+          <button class="play-btn" id="unlockIpBtn">UNLOCK IP</button>
          </div>
          <div class="discord-container">
             <div class="flex slideNewsBlock">
@@ -177,10 +217,10 @@
                </div>
                <div class="newsBlock">
                   <div class="flex-s newsTitle">
-                     <h2>MostWanted® Roleplay</h2>
+                     <h2>Most Wanted Roleplay</h2>
                   </div>
                   <div class="news-content">
-                     <p>Αγαπητό Community, καλώς ορίσατε στον MostWanted®,</p>
+                     <p>Αγαπητό Community, καλώς ορίσατε στον Most Wanted,</p>
                      <p>Αν θέλετε να μπείτε χωρίς κανένα πρόβλημα, διαβάστε προσεκτικά τους κανόνες της νέας πόλης.</p>
                      <br>
                      <p><span class="highlight-text">Σας υποσχόμαστε κάτι μοναδικό και πρωτότυπο σε σχέση με τα ελληνικά δεδομένα.</span></p>
@@ -191,7 +231,721 @@
             </div>
          </div>
       </section>
+
+<style>
+
+.team-section {
+  padding: 50px 20px;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffffff; /* Red color */
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-member {
+    background: rgba(30, 30, 30, 0.382);
+    backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  height: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.team-h3 {
+  font-size: 24px;
+
+}
+
+.team-p {
+  font-size: 14px;
+  color: #a0aec0; /* Light gray text */
+  margin-bottom: 20px;
+}
+
+.team-social-links a {
+  text-decoration: none;
+  color: #f56565; /* Red color */
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.team-social-links a:hover {
+  color: #ffffff; /* Darker red on hover */
+}
+
+</style>
+
+<section class="team-section">
+    <div class="team-container container">
+      <h2 class="team-h2">Our Team</h2>
+  
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="img/logo.webp" alt="Team Member 1">
+          <h3 class="team-h3">Bandolero</h3>
+          <p class="team-p">CEO</p>
+        </div>
+  
+        <div class="team-member">
+          <img src="img/logo.webp" alt="Team Member 2">
+          <h3 class="team-h3">UnderWorld</h3>
+          <p class="team-p">CEO</p>
+        </div>
+  
+        <div class="team-member">
+          <img src="img/developers_icons/lo.webp" alt="Team Member 3">
+          <h3 class="team-h3">Lorentzos</h3>
+          <p class="team-p">Developer</p>
+        </div>
+
+        <div class="team-member">
+            <img src="img/developers_icons/get.webp" alt="Team Member 3">
+            <h3 class="team-h3">GetAhead</h3>
+            <p class="team-p">Developer</p>
+          </div>
+        
+
+          <div class="team-member">
+            <img src="img/developers_icons/sln.webp" alt="Team Member 3">
+            <h3 class="team-h3">Silence</h3>
+            <p class="team-p">Developer</p>
+          </div>
+
+          <div class="team-member">
+            <img src="img/developers_icons/bro.webp" alt="Team Member 3">
+            <h3 class="team-h3">𝕻𝖗𝖔𝕺𝖋𝕿𝖍𝖊𝕿𝖎𝖒𝖊</h3>
+            <p class="team-p">Developer</p>
+          </div>
+
+          <div class="team-member">
+            <img src="img/developers_icons/nea.webp" alt="Team Member 3">
+            <h3 class="team-h3">Neaxfus</h3>
+            <p class="team-p">Developer</p>
+          </div>
+
+          <div class="team-member">
+            <img src="img/logo.webp" alt="Team Member 3">
+            <h3 class="team-h3">Life Owner</h3>
+            <p class="team-p">Developer</p>
+          </div>
+
+          <div class="team-member">
+            <img src="img/logo.webp" alt="Team Member 3">
+            <h3 class="team-h3">ZaYn</h3>
+            <p class="team-p">Developer</p>
+          </div>
+
+          <div class="team-member">
+            <img src="img/developers_icons/whi.gif" alt="Team Member 3">
+            <h3 class="team-h3">Whiskakii</h3>
+            <p class="team-p">Developer</p>
+          </div>
+
+          <div class="team-member">
+            <img src="img/developers_icons/tas.webp" alt="Team Member 3">
+            <h3 class="team-h3">Tasos27</h3>
+            <p class="team-p">Developer</p>
+          </div>
+        <!-- Add more team members as needed -->
+  
+      </div><!-- .team-grid -->
+  
+    </div><!-- .team-container -->
+  </section><!-- .team-section -->
       
+
+  <div class="flex str-m">
+    <div class="streamBlock">
+      <h2>MW Streamers</h2>
+      <div class="str-block">
+        <a href="./streamers" class="diyu"><img src="img/Diyu.png" alt=""></a>
+        <a href="./streamers" class="bando"><img src="img/bando.png" alt=""></a>
+      </div>
+
+    </div>
+  </div><!--str-m-->
+  
+  
+<style>
+.str-m {
+  position: relative;
+  margin: 0 auto 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+}
+
+
+.str-m:after {
+  content: "";
+  background: url(../images/hero.png) no-repeat;
+  width: 714px;
+  height: 919px;
+  position: absolute;
+  top: -50px;
+  left: -34px;
+}
+
+.str-m > div {
+  width: 100%;
+}
+
+.str-m h2 {
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+
+.streamBlock {
+  position: relative;
+  z-index: 2;
+}
+
+.streamBlock .str-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+
+.streamBlock a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(50% - 10px);
+  height: 150px;
+  padding: 10px;
+  width: 460px;
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 15px; /* Increased border radius for a modern look */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.streamBlock a img {
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5));
+}
+
+.streamBlock a:hover {
+  transform: scale(0.90);
+}
+
+.streamBlock a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.streamBlock a.twitch {
+  background-color: #562e8e;
+}
+
+.streamBlock a.twitch:after {
+  background: url(../images/twich-hero.png) no-repeat;
+  width: 145px;
+  height: 142px;
+  right: 3px;
+}
+
+.streamBlock a.youtube {
+  background-color: #6e0f0f;
+}
+
+.streamBlock a.youtube:after {
+  background: url(img/yt-hero.png) no-repeat;
+  width: 147px;
+  height: 143px;
+}
+
+.streamBlock a.diyu {
+  background-color: #6e0f0f;
+}
+
+.diyu {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border:  1px rgb(231, 45, 45) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+background-color: rgb(78, 21, 7);
+border-radius: 5px;
+  background-size: cover;
+  background-image: url('img/red-bg.jpg');
+}
+
+.diyu::before {
+  content: "";
+  position: absolute;
+  width: 100%; /* Full width initially */
+  height: 100%;
+  background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100%; /* Start off-screen */
+  opacity: 0.6;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth cubic-bezier transition */
+}
+
+.diyu:hover::before {
+  left: 100%; /* Move to full width */
+}
+
+.diyu span {
+  position: relative;
+  z-index: 1;
+}
+
+.diyu:hover {
+  background-color: rgb(120, 28, 5);
+  background-image: url('img/red-bg-bl.png');
+  
+}
+
+/* bando */
+
+
+.bando {
+  position: relative;
+  width: 300px;
+  height: 80px;
+  overflow: hidden;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border:  1px rgb(231, 45, 45) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: background-color 0.3s ease;
+background-color: rgb(78, 21, 7);
+border-radius: 5px;
+  background-size: cover;
+  background-image: url('img/red-bg.jpg');
+}
+
+.bando::before {
+  content: "";
+  position: absolute;
+  width: 100%; /* Full width initially */
+  height: 100%;
+  background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100%; /* Start off-screen */
+  opacity: 0.6;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth cubic-bezier transition */
+}
+
+.bando:hover::before {
+  left: 100%; /* Move to full width */
+}
+
+.bando span {
+  position: relative;
+  z-index: 1;
+}
+
+.bando:hover {
+  background-color: rgb(120, 28, 5);
+  background-image: url('img/red-bg-bl.png');
+  
+}
+
+.streamBlock a.diyu:after {
+  background: url(img/hero2.png) no-repeat;
+  width: 147px;
+  height: 143px;
+}
+
+.streamBlock a.bando {
+  background-color: #6e0f0f;
+}
+
+.streamBlock a.bando:after {
+  background: url(img/hero1.png) no-repeat;
+  width: 147px;
+  height: 143px;
+}
+@media (max-width: 1200px) {
+  .str-m {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .streamBlock a {
+    width: calc(50% - 10px);
+    height: 130px;
+  }
+
+  .str-m h2 {
+    font-size: 36px;
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .streamBlock a {
+    width: 100%;
+    height: 120px;
+  }
+
+  .str-m h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .streamBlock a {
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  .str-m h2 {
+    font-size: 28px;
+  }
+
+  .str-m:after {
+    width: 357px;
+    height: 459px;
+    top: -25px;
+    left: -17px;
+  }
+}
+</style>
+
+<!-- Modal Structure for playh or unlockip -->
+<div id="puipModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 style="font-size: 41px;">ALERT</h2>
+    <h2 style="font-size: 25px;">THE SERVER IS UNDER DEVELOPMENT!</h2>
+  </div>
+</div>
+
+<!-- Modal Structure for Bando -->
+<div id="bandoModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 style="font-size: 25px;">Follow Us on Bando</h2>
+    <div class="social-icons">
+      <a href="https://www.youtube.com" target="_blank"><img src="img/youtube.webp" alt="YouTube"></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="img/instagram.webp" alt="Instagram"></a>
+      <a href="https://www.tiktok.com" target="_blank"><img src="img/tiktok.webp" alt="TikTok"></a>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Structure for Diyu -->
+<div id="diyuModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 style="font-size: 25px;">Follow Us on Diyu</h2>
+    <div class="social-icons">
+      <a href="https://www.youtube.com/channel/UCcUV2t08cXluEpf_g4KuLug" target="_blank"><img src="img/youtube.webp" alt="YouTube"></a>
+      <a href="https://www.instagram.com/diyu_raw/" target="_blank"><img src="img/instagram.webp" alt="Instagram"></a>
+      <a href="https://www.tiktok.com/@imdiyu" target="_blank"><img src="img/tiktok.webp" alt="TikTok"></a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Soft dark color */
+}
+
+.modal-content {
+  background-color: #1a1a1a; /* Dark background color */
+  margin: 10% auto; /* Adjusted margin for centering */
+  padding: 30px;
+  border: 2px solid #ff4d4d; /* Red border */
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.modal-content h2 {
+  color: #ff4d4d; /* Red text color for headings */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff4d4d; /* Red color on hover */
+  text-decoration: none;
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: center;
+  gap: 20px; /* Gap between icons */
+  margin-top: 30px; /* Top margin */
+}
+
+.social-icons a {
+  width: 100px; /* Width of each icon container */
+  height: 100px; /* Height of each icon container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Needed for overlay effect */
+  overflow: hidden; /* Hide overflow content */
+  border-radius: 50%; /* Rounded shape for circular icons */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.social-icons a img {
+  width: 60px; /* Ensure consistent width for the image */
+  height: 60px; /* Ensure consistent height for the image */
+  max-width: 100%; /* Ensure images scale within container */
+  max-height: 100%; /* Ensure images scale within container */
+  object-fit: cover; /* Maintain aspect ratio and cover entire space */
+}
+
+.social-icons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 77, 77, 0); /* Transparent red overlay */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.social-icons a:hover::before {
+  background-color: rgba(255, 77, 77, 0.5); /* Semi-transparent red overlay on hover */
+  border-radius: 15px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1); /* Scale up the icon container on hover */
+}
+
+
+
+</style>
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    var puipModal = document.getElementById("puipModal");
+    var puipLink = document.getElementById("puipLink");
+    var playNowBtn = document.getElementById("playNowBtn");
+    var unlockIpBtn = document.getElementById("unlockIpBtn");
+
+    // Function to open puipModal
+    function openPuipModal() {
+      puipModal.style.display = "block";
+    }
+
+    // Add click event listener to puipLink
+    if (puipLink) {
+      puipLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default behavior of the link
+        openPuipModal();
+      });
+    }
+
+    // Add click event listener to playNowBtn
+    playNowBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default behavior of the button
+      openPuipModal();
+    });
+
+    // Add click event listener to unlockIpBtn
+    unlockIpBtn.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default behavior of the button
+      openPuipModal();
+    });
+
+    // Close modal functionality
+    var closeButtons = document.querySelectorAll(".modal .close");
+
+    closeButtons.forEach(function(closeButton) {
+      closeButton.addEventListener('click', function() {
+        puipModal.style.display = "none";
+      });
+    });
+
+    // Close modal if clicked outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target === puipModal) {
+        puipModal.style.display = "none";
+      }
+    });
+  });
+
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var bandoModal = document.getElementById("bandoModal");
+    var diyModal = document.getElementById("diyuModal");
+    var bandoBtn = document.querySelector(".bando");
+    var diyBtn = document.querySelector(".diyu");
+    var spans = document.querySelectorAll(".modal .close");
+
+    bandoBtn.onclick = function(event) {
+      event.preventDefault();
+      bandoModal.style.display = "block";
+    }
+
+    diyBtn.onclick = function(event) {
+      event.preventDefault();
+      diyModal.style.display = "block";
+    }
+
+    spans.forEach(function(span) {
+      span.onclick = function() {
+        bandoModal.style.display = "none";
+        diyModal.style.display = "none";
+      }
+    });
+
+    window.onclick = function(event) {
+      if (event.target == bandoModal || event.target == diyModal) {
+        bandoModal.style.display = "none";
+        diyModal.style.display = "none";
+      }
+    }
+  });
+</script>
+
+
+
+<div class="video-section">
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/VSbgryxCfss" frameborder="0" allowfullscreen></iframe>
+        <p>Η ΙΣΤΟΡΙΑ του θρυλικού GTA SAN ANDREAS!</p>
+    </div>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/1NKDtRENMQ4" frameborder="0" allowfullscreen></iframe>
+        <p>Η ΙΣΤΟΡΙΑ του θρυλικού GTA SAN ANDREAS!</p>
+    </div>
+    <div class="video">
+        <iframe src="https://www.youtube.com/embed/1NKDtRENMQ4" frameborder="0" allowfullscreen></iframe>
+        <p>Η ΙΣΤΟΡΙΑ του θρυλικού GTA SAN ANDREAS!</p>
+    </div>
+    <!-- Add more video entries as needed -->
+</div>
+
+<style>
+   .video-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    perspective:500px;
+}
+
+.video {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px; /* Added to create space between rows */
+    border: 1px solid #222222;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video:hover {
+    transform: translateY(-5px);
+}
+
+.video iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+}
+
+.video p {
+    padding: 15px;
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #222222;
+}
+
+</style>
+
       <div class="features-container">
          <h2 class="section-title">Unique Features</h2>
          <div class="flex">
@@ -245,14 +999,14 @@
                       <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> <span class="icon-text">Αρχική</span></a></li>
                       <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-play"></i> <span class="icon-text">Παίξε τώρα</span></a></li>
                       <li class="nav-item"><a class="nav-link" href="rules.html"><i class="fas fa-book"></i> <span class="icon-text">Κανόνες</span></a></li>
-                      <li class="nav-item"><a class="nav-link" href="https://discord.gg/mostwantedroleplay"><i class="fab fa-discord"></i> <span class="icon-text">Discord</span></a></li>
+                      <li class="nav-item"><a class="nav-link" href="donates.html"><i class="fas fa-donate"></i> <span class="icon-text">Donates</span></a></li>
                      </ul>
                   </div>
                </div>
                <div class="footer-column">
                   <div class="about">
-                     <h3>MostWanted® Roleplay</h3>
-                     <p>Ο MostWanted® Roleplay φέρνει την ατμόσφαιρα του GTA RP στο FiveM με απίστευτες περιπέτειες και ατελείωτες δυνατότητες. Συνδεθείτε για να ζήσετε το δικό σας σενάριο, να συνάψετε συμμαχίες και να απολαύσετε το ρεαλιστικότερο GTA RP περιβάλλον στο FiveM.</p>
+                     <h3>Most Wanted Roleplay</h3>
+                     <p>Ο Most Wanted Roleplay φέρνει την ατμόσφαιρα του GTA RP στο FiveM με απίστευτες περιπέτειες και ατελείωτες δυνατότητες. Συνδεθείτε για να ζήσετε το δικό σας σενάριο, να συνάψετε συμμαχίες και να απολαύσετε το ρεαλιστικότερο GTA RP περιβάλλον στο FiveM.</p>
                   </div>
                </div>
                <div class="footer-column">
