@@ -120,7 +120,7 @@ header {
 .main-nav ul li a:hover {
   color: #fff;
   background-color: #d52b14;
-  border-radius: 4px;
+  border-radius: 10px;
   animation: pulse 0.5s ease-in-out;
 }
 
@@ -251,6 +251,21 @@ input[type="checkbox"]:checked ~ .menu-btn span:after {
   }
 }
 
+.donate-button {
+  background: linear-gradient(45deg, #ff9361, #de4d52); /* Modern gradient background */
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(255, 105, 135, .3); /* Subtle shadow for elevation */
+  transition: all 0.4s ease-in-out;
+  border-radius: 10px;
+}
+
+.donate-button:hover {
+  background: linear-gradient(45deg, #de4d52, #ff6f61); /* Reverse gradient on hover */
+  box-shadow: 0 6px 20px rgba(255, 105, 135, .5); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+
 .home {
   padding: 5rem 10%;
   margin-top: 80px;
@@ -295,6 +310,7 @@ input[type="checkbox"]:checked ~ .menu-btn span:after {
 .home-logo {
   width: 100%;
   border-radius: 10px;
+  padding: 50px;
   position: relative; /* Ensure positioning context for absolute positioned elements */
   display: block; /* Ensures the image is treated as a block element */
 }
@@ -711,13 +727,13 @@ input[type="checkbox"]:checked ~ .menu-btn span:after {
   }
 }
 
-
 .sparks {
   position: absolute;
   left: 70%;
   transform: translateX(-50%);
   bottom: 90;
 }
+
 
 .sparks > .spark {
     position: absolute;
@@ -1033,47 +1049,49 @@ border-radius: 5px;
 }
 
 
-        .social-section {
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            background-color: #1e1e1e; /* Slightly lighter dark background */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
-            z-index: 1000;
-        }
-        .social-nav {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .social-nav-item {
-            margin: 0;
-        }
-        .social-nav-link {
-            color: #f2f2f2;
-            text-decoration: none;
-            font-size: 24px; /* Adjusted icon size */
-            padding: 10px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-            display: flex; /* Use flexbox for alignment */
-            align-items: center; /* Center align items vertically */
-            justify-content: center; /* Center align items horizontally */
-            background-color: #1e1e1e;
-        }
-        /* Active and hover states */
-        .social-nav-link:hover {
-            color: #fff;
-            background-color: #d52b14;
-            border-radius: 20%;
-            animation: pulse 0.5s ease-in-out;
-        }
+
+.social-section {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #1e1e1e; /* Slightly lighter dark background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  z-index: 1000;
+}
+.social-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.social-nav-item {
+  margin: 0;
+}
+.social-nav-link {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 24px; /* Adjusted icon size */
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  background-color: #1e1e1e;
+}
+/* Active and hover states */
+.social-nav-link:hover {
+  color: #fff;
+  background-color: #d52b14;
+  border-radius: 20%;
+  animation: pulse 0.5s ease-in-out;
+}
+/* Animation keyframes */
