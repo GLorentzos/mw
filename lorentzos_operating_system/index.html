@@ -1,0 +1,281 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>lorentzos os</title>
+    <link rel="stylesheet" href="static/css/operating_system.css" />
+    <link rel="icon" href="icon/mwlogoheader.webp" type="image/x-icon" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+  <body onload="startTime()">
+    <div class="navbar">
+      <ul>
+        <!-- <li class="parent">
+          File
+          <ul>
+            <li>
+              <button>OS : Lorentzos Os</button>
+              <button>New Window</button>
+            </li>
+            <li>
+              <button>Open File</button>
+              <button>Open Recent File</button>
+            </li>
+            <li>
+              <button>Save</button>
+              <button>Save as</button>
+            </li>
+            <li>
+              <button>Searching</button>
+              <button>Propertie File</button>
+            </li>
+            <li>
+              <button>Customize</button>
+            </li>
+            <li>
+              <button>Exit</button>
+            </li>
+          </ul>
+        </li> -->
+        <li class="parent" onclick="window.open('https://www.instagram.com/mostwanted_roleplay/', '_blank');">Instagram</li>
+        <li class="parent" onclick="window.open('https://www.tiktok.com/@mostwanted__roleplay', '_blank');">Tik Tok</li>
+        <li class="parent" onclick="window.open('https://www.youtube.com/@MostWantedOfficial333/featured', '_blank');">Youtube</li>
+        <li class="parent" onclick="window.open('https://discord.gg/mostwantedroleplay', '_blank');">Discord</li>
+      </ul>
+
+      <ul class="navbar__right">
+        <li>
+          <svg width="24" height="24">
+            <path d="M12 6c3.537 0 6.837 1.353 9.293 3.809l1.414-1.414C19.874 5.561 16.071 4 12 4 7.929 4.001 4.126 5.561 1.293 8.395l1.414 1.414C5.163 7.353 8.463 6 12 6zM17.671 14.307c-3.074-3.074-8.268-3.074-11.342 0l1.414 1.414c2.307-2.307 6.207-2.307 8.514 0L17.671 14.307z"></path>
+            <path d="M20.437,11.293c-4.572-4.574-12.301-4.574-16.873,0l1.414,1.414c3.807-3.807,10.238-3.807,14.045,0L20.437,11.293z"></path>
+            <circle cx="12" cy="18" r="2"></circle>
+          </svg>
+        </li>
+        <li class="hidden">GR</li>
+        <li class="clock">
+          <span id="date" class="hidden"></span>
+          <span id="txt"></span>
+        </li>
+      </ul>
+    </div>
+    <!--navbar bottom start-->
+
+    <div class="menu">
+      <ul class="earth">
+        <li  class="icon" id="openWebsite">
+          <img src="static/img/mwapp.png" alt="Finder Logo" />
+        </li>
+        <li  class="icon" id="openKeybinds">
+          <img src="static/img/keybinds.png" alt="Keybinds Logo" />
+        </li>
+        <li  class="icon" id="openJobs">
+          <img src="static/img/jobs.png" alt="Jobs Logo" />
+        </li>
+        <li class="icon open-cal">
+          <img src="static/img/calculator.png" alt="Calculator Logo" class="hidden"/>
+        </li>
+        <li class="icon">
+          <img
+            class="opening"
+            src="static/img/terminal.png"
+            alt="Terminal Logo"
+          />
+        </li>
+        <li class="hidden"/>
+      </ul>
+    </div>
+
+
+    <div class="container">
+      <!-- Terminal -->
+      <div class="window terminal">
+        <div class="window__taskbar">
+          <div class="window__taskbar--actions">
+            <button class="close"></button>
+            <!-- <button class="full"></button>
+            <button class="backfull"></button> -->
+          </div>
+          <div class="window__taskbar--content">
+            <h2>Terminal</h2>
+          </div>
+        </div>
+        <textarea
+          name="terminal"
+          id="commands"
+          placeholder="Last Login : Wed 22 May 23:43:02 on console"
+        ></textarea>
+      </div>
+
+
+
+
+<!-- Web -->
+<div class="window web" style="height: auto;">
+  <div class="window__taskbar">
+    <div class="window__taskbar--actions">
+      <button class="close-web"></button>
+      <!-- <button class="full-web"></button>
+      <button class="backfull-web"></button> -->
+    </div>
+    <div class="window__taskbar--content">
+      <h2>WEB</h2>
+    </div>
+  </div>
+  <!--taskbar center end-->
+  <div class="content">
+    <iframe src="rules.html" frameborder="0" class="web-iframe"></iframe>
+  </div>
+</div>
+
+
+
+
+<!-- Keybinds Window -->
+<div class="window keybinds" style="display: none;">
+  <div class="window__taskbar">
+    <div class="window__taskbar--actions">
+      <button class="close-keybinds"></button>
+      <!-- <button class="full-keybinds"></button>
+      <button class="backfull-keybinds"></button> -->
+    </div>
+    <div class="window__taskbar--content">
+      <h2>KEYBINDS</h2>
+    </div>
+  </div>
+<iframe src="keybinds.html" frameborder="0" class="web-iframe"></iframe>
+
+</div>
+
+<!-- Jobs Window -->
+<div class="window jobs" style="display: none;">
+  <div class="window__taskbar">
+    <div class="window__taskbar--actions">
+      <button class="close-jobs"></button>
+      <!-- <button class="full-jobs"></button>
+      <button class="backfull-jobs"></button> -->
+    </div>
+    <div class="window__taskbar--content">
+      <h2>JOBS</h2>
+    </div>
+  </div>
+    <iframe src="jobs.html" frameborder="0" class="web-iframe"></iframe>
+</div>
+
+      <!-- calculator -->
+  <div class="calculator">
+    <div class="window__taskbar cal-taskabr"> 
+      <button class="close-cal"></button>
+      <!-- <button class="max-cal"></button>
+      <button class="min-cal"></button> -->
+     </div>
+    <!-- display -->
+    <div class="top">
+      <div class="cal-taskabr">
+      </div>
+    <input type="text" class="display output" disabled >
+  </div>
+    <!-- keys -->
+    <div class="input">
+        <button value="C" class="child operator-2">C</button>
+        <button value="+/-" class="child operator-2">+/-</button>
+        <button value="%" class="child operator-2">%</button>
+        <button value="/" class="child operator">÷</button>
+        <button value="7" class="child number">7</button>
+        <button value="8" class="child number">8</button>
+        <button value="9" class="child number">9</button>
+        <button value="*" class="child operator">×</button>
+        <button value="4" class="child number">4</button>
+        <button value="5" class="child number">5</button>
+        <button value="6" class="child number">6</button>
+        <button value="-" class="child operator">−</button>
+        <button value="1" class="child number">1</button>
+        <button value="2" class="child number">2</button>
+        <button value="3" class="child number">3</button>
+        <button value="+" class="child operator">+</button>
+        <button value="0" class="child number large l-radius">0</button>
+        <button value="." class="child number">.</button>
+        <button value="=" class="child operator r-radius">=</button>
+    </div>
+
+  </div>
+    </div>
+
+    <script src="static/js/operating_system.js"></script>
+
+    <!--navbar bottom end-->
+    <script>
+      $(function () {
+        $('.terminal').draggable()
+$('.web').draggable()
+        $('.keybinds').draggable()
+        $('.jobs').draggable()
+        $('.calculator').draggable()
+      })
+    </script>
+
+    <script>
+      var d = new Date()
+      document.getElementById('date').innerHTML = d.toDateString()
+    </script>
+
+    <script>
+      function startTime() {
+        var today = new Date()
+        var h = today.getHours()
+        var m = today.getMinutes()
+        var s = today.getSeconds()
+        m = checkTime(m)
+        s = checkTime(s)
+        document.getElementById('txt').innerHTML = h + ':' + m + ':' + s
+        var t = setTimeout(startTime, 1000)
+      }
+      function checkTime(i) {
+        if (i < 10) {
+          i = '0' + i
+        } // add zero in front of numbers < 10
+        return i
+      }
+    </script>
+  </body>
+</html>
