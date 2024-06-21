@@ -9,7 +9,7 @@ var navbar = document.querySelector('.navbar')
 
 var opening = document.querySelector('.opening')
 
-var terminal = document.querySelector('.terminal')
+var mwai = document.querySelector('.mwai')
 var typing = document.querySelector('.typing')
 var calculator = document.querySelector('.calculator')
 var opencalculator = document.querySelector('.open-cal')
@@ -25,12 +25,12 @@ var jobsWindow = document.querySelector('.jobs');
 
 
 function handleClose() {
-  terminal.style.display = 'none'
+  mwai.style.display = 'none'
 }
 
 
 function handleOpening() {
-  terminal.style.display = 'block'
+  mwai.style.display = 'block'
   container.style.display = 'flex'
   navbar.style.display = 'flex'
 }

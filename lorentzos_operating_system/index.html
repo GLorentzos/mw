@@ -118,8 +118,8 @@
         <li class="icon">
           <img
             class="opening"
-            src="static/img/terminal.png"
-            alt="Terminal Logo"
+            src="static/img/mwai.png"
+            alt="mwai Logo"
           />
         </li>
         <li class="hidden"/>
@@ -128,8 +128,8 @@
 
 
     <div class="container">
-      <!-- Terminal -->
-      <div class="window terminal">
+      <!-- mwai -->
+      <div class="window mwai">
         <div class="window__taskbar">
           <div class="window__taskbar--actions">
             <button class="close"></button>
@@ -137,14 +137,10 @@
             <button class="backfull"></button> -->
           </div>
           <div class="window__taskbar--content">
-            <h2>Terminal</h2>
+            <h2>MW AI</h2>
           </div>
         </div>
-        <textarea
-          name="terminal"
-          id="commands"
-          placeholder="Last Login : Wed 22 May 23:43:02 on console"
-        ></textarea>
+        <iframe src="https://lorentzos.digital/mw/lorentzos_ai.html" frameborder="0" class="web-iframe"></iframe>
       </div>
 
 
@@ -246,7 +242,7 @@
     <!--navbar bottom end-->
     <script>
       $(function () {
-        $('.terminal').draggable()
+        $('.mwai').draggable()
 $('.web').draggable()
         $('.keybinds').draggable()
         $('.jobs').draggable()
