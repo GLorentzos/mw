@@ -30,18 +30,18 @@ function handleClose() {
 
 
 function handleOpening() {
-  mwai.style.display = 'block'
-  container.style.display = 'flex'
-  navbar.style.display = 'flex'
+  mwai.style.display = 'block';
+  container.style.display = 'flex';
+  navbar.style.display = 'flex';
 }
 
 
 
 
 function handleOpenCal() {
-  calculator.style.display = 'block'
-  container.style.display = 'flex'
-  navbar.style.display = 'flex'
+  calculator.style.display = 'block';
+  container.style.display = 'flex';
+  navbar.style.display = 'flex';
 }
 function handleCloseCal() {
   calculator.style.display = 'none'
