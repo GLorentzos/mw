@@ -100,7 +100,17 @@
                </nav>
             </div>
          </header>
-         <section  style="height:180px">
+         <style>
+          .main-bg-site-section {
+              height: 180px;
+          }
+          @media (max-width: 968px) {
+              .main-bg-site-section {
+                  height: 10px;
+              }
+          }
+         </style>
+         <section class="main-bg-site-section">
             <div class="image-layer first-layer" style="background-image:url(images/background.jpg)"></div>
             <div class="image-layer2 second-layer" style="background-image:url(images/footer-bg.jpg)"></div>
          </section>
