@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>404 Not Found</title>
+    <meta charset="utf-8">
+    <title>MostWanted® - GTA V Roleplay Server</title>
+    <meta name="description" content="MostWanted® - GTA V Roleplay Server">
+    <meta name="keywords" content="MostWanted® , gta v, grand theft auto, gta">
+    <meta property="og:title" content="MostWanted® - GTA V Roleplay Server" />
+    <meta property="og:image" content="images/logo.webp">
+    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
+    <link rel="icon" href="images/logo.webp" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
 html {
-    overflow-y: scroll;
-    color: #eee; 
+    overflow: hidden; 
+    color: #eee;
     font: 400 62.5%/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -19,13 +26,28 @@ body,
 html {
     height: 100%;
     min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: #292d34;
+    overflow: hidden; 
 }
 
 body {
     margin: 0;
     font-size: 1.3rem;
-    background: #292d34
-    color: #eee;
+    background: #292d34; 
+    color: #eee; 
 }
 
 a {
@@ -45,7 +67,7 @@ a:hover {
 h1,
 h2 {
     margin: 0 0 0.5rem;
-    color: #ccc;
+    color: #ccc; 
     font-weight: 400;
     line-height: 1;
 }
@@ -66,12 +88,12 @@ h2 {
 
 p {
     margin: 1.2rem 0;
-    color: #ccc;
+    color: #ccc; 
 }
 
 p.lead {
     font-size: 1.6rem;
-    color: #bbb;
+    color: #bbb; 
 }
 
 hr {
@@ -82,76 +104,46 @@ hr {
     border-top: 1px solid #444; 
 }
 
-.page {
-    display: flex;
-    min-height: 100vh;
-}
-
-.page:before {
-    content: '';
-    flex: 0 1 474px;
-    background: #38444f url('https://lorentzos.digital/images/logo.png') 50% 6em no-repeat; /* Adjust image and background color */
-    background-size: 44% auto;
-}
-
 .main {
-    flex: 1 1 70%;
-    box-sizing: border-box;
-    padding: 10rem 5rem 5rem;
-    min-height: 100vh;
+    width: 100%;
+    max-width: 600px; 
+    padding: 5rem;
 }
 
 .error-description {
     flex: 1;
 }
 
+.help-actions {
+    margin-bottom: 2rem; 
+}
+
 .help-actions a {
     display: inline-block;
-    border: 2px solid #e84855; 
+    border: 2px solid #e84855;
     margin: 0 0.5rem 0.5rem 0;
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: 0.25s ease;
-    color: #eee; 
+    color: #eee;
 }
 
 .help-actions a:hover {
-    background: #e84855;
+    background: #e84855; 
     color: #fff; 
 }
 
-@media (max-width:959px) {
-    .page:before {
-        flex-basis: 400px;
-        background-position: 50% 4rem;
-    }
-    .main {
-        padding: 5rem;
-    }
+.center {
+    position: relative; 
+    width: 100%; 
 }
 
-@media (max-width: 769px) {
-    .page {
-        flex-direction: column;
-    }
-    .page:before {
-        flex-basis: 250px;
-        background-position: 5rem -4.8rem;
-        background-size: 166px auto;
-    }
-    .main {
-        min-height: 0;
-        flex: none;
-    }
-}
-
-@media (max-width: 479px) {
-    h2 {
-        font-size: 3rem;
-    }
-    .main {
-        padding: 3rem;
-    }
+.watermark {
+    position: absolute;
+    top: 30%;
+    left: 50%; 
+    width: 40%;
+    transform: translate(-50%, -50%); 
 }
 </style>
 </head>
@@ -165,10 +157,13 @@ hr {
       <hr>
       <p>What you can do:</p>
       <div class="help-actions">
-        <a href="javascript:location.reload();">Reload Page</a>
-        <a href="javascript:history.back();">Back to Previous Page</a>
-        <a href="index.html">Home Page</a>
-      </div>
+        <a href="javascript:location.reload();"><i class="fas fa-redo-alt"></i> Reload Page</a>
+        <a href="javascript:history.back();"><i class="fas fa-arrow-left"></i> Back to Previous Page</a>
+        <a href="index.html"><i class="fas fa-home"></i> Home Page</a>
+      </div><br><br>
+      <div class="center">
+      <img src="images/lorentzos.png" alt="Watermark Image" class="watermark">
+    </div>
     </div>
   </div>
 </body>
