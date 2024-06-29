@@ -1,407 +1,524 @@
-<!DOCTYPE html>
-<html lang="el">
-   <head prefix="og: https://ogp.me/ns#">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="referrer" content="always">
-      <meta name="document-state" content="Dynamic">
-      <link rel="stylesheet" href="css/styles.css">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="x-dns-prefetch-control" content="on">
-      <link rel="manifest" href="manifest.json">
-      <title>MostWanted® Roleplay</title>
-      <link rel="icon" href="img/logo.webp" type="image/x-icon">
-      <meta name="description" content="MostWanted® Roleplay | FiveM Server">
-      <meta name="keywords" content="mw, mostwanted">
-      <meta name="author" content="Lorentzos">
-      <meta property="og:title" content="MostWanted® Roleplay">
-      <meta property="og:description" content="MostWanted® Roleplay | FiveM Server">
-      <meta property="og:image" content="img/logo.webp">
-      <meta property="og:url" content="">
-      <meta property="og:type" content="website">
-      <link rel="icon" href="img/logo.webp" type="image/webp">
-      <link rel="shortcut icon" href="img/logo.webp" type="image/webp">
-      <link rel="preload" href="img/logo.webp" as="image">
-      <link rel="preload" href="img/mwlogoheader.webp" as="image">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-      <script type="application/ld+json">
-         {
-             "@context": "https://schema.org",
-             "@type": "LocalBusiness",
-             "name": "MostWanted® Roleplay",
-             "image": "img/logo.webp",
-             "url": "",
-             "telephone": "",
-             "address": {
-                 "@type": "PostalAddress",
-                 "streetAddress": "",
-                 "addressLocality": "",
-                 "addressRegion": "",
-                 "postalCode": "",
-                 "addressCountry": "GR"
-             },
-             "geo": {
-                 "@type": "GeoCoordinates",
-                 "latitude": "",
-                 "longitude": ""
-             },
-             "sameAs": [
-                 ""
-             ]
-         }
-      </script>
-      <style>
-         body {
-         font-family: Arial, sans-serif;
-         line-height: 1.6;
-         background-color: #1a1a1a;
-         color: #ccc;
-         margin: 0;
-         padding: 0;
-         }
-         .rules-container {
-         max-width: 800px;
-         margin: auto;
-         padding: 20px;
-         border-radius: 5px;
-         margin-top: 20px;
-         }
-         h1 {
-         color: #dc3545;
-         text-align: center;
-         margin-bottom: 20px;
-         }
-         .category {
-         margin-top: 30px;
-         }
-         .category h2 {
-         color: #dc3545;
-         font-size: 24px;
-         border-bottom: 2px solid #dc3545;
-         padding-bottom: 5px;
-         margin-bottom: 15px;
-         }
-         .rule-item {
-         padding: 10px;
-         background-color: #1a1a1a;
-         border-left: 4px solid #dc3545;
-         color: white;
-         border-radius: 3px;
-         margin-bottom: 15px;
-         }
-         .rule-item h3 {
-         margin-top: 0;
-         font-size: 28px;
-         color: rgb(250, 0, 0);
-         }
-         .rule-item p {
-         margin-bottom: 0;
-         color: white;
-         font-size: 14px;
-         }
-      </style>
-   </head>
-   <body>
-      <header>
-         <div class="header-container">
-            <picture class="logo">
-               <img src="img/mwlogoheader.webp" alt="logo" draggable="false" loading="lazy">
-            </picture>
-            </a>
-            <input type="checkbox" id="click">
-            <label for="click" class="menu-btn">
-            <span></span>
-            </label>
-            <nav class="main-nav">
-               <ul>
-                  <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> <span class="icon-text">Αρχική</span></a></li>
-                  <li class="nav-item"><a class="nav-link active" href="rules.html"><i class="fas fa-book"></i> <span class="icon-text">Κανόνες</span></a></li>
-                  <li class="nav-item donate-button"><a class="nav-link" href="donates.html"><i class="fas fa-donate"></i> <span class="icon-text">Donates</span></a></li>
-               </ul>
-            </nav>
-         </div>
-      </header>
-      <section class="home" id="home">
-         <div class="wrap">  
 
-         <div class="slide-container active">
-          <picture>
-            <img src="img/logo2.webp" class="home-logo" alt="logo" draggable="false" loading="lazy" style="height: 440px;">
-            <div class="sparks">
-              <div class="spark spark_1"></div>
-              <div class="spark spark_2"></div>
-              <div class="spark spark_3"></div>
-              <div class="spark spark-big"></div>
-          </div>
-        </picture>        
-         </div>
-         </div>
-      </section>
-                <div class="social-section">
-        <ul class="social-nav">
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://www.instagram.com/mostwanted_roleplay">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://www.tiktok.com/@mostwanted__roleplay">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-            </li>
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://www.youtube.com/@MostWantedOfficial333/featured">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </li>
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://discord.gg/mostwantedroleplay">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </li>
-        </ul>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>MostWanted® - GTA V Roleplay Server</title>
+        <meta name="description" content="MostWanted® - GTA V Roleplay Server">
+        <meta name="keywords" content="MostWanted® , gta v, grand theft auto, gta">
+        <meta property="og:title" content="MostWanted® - GTA V Roleplay Server" />
+        <meta property="og:image" content="images/logo.webp">
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
+        <link rel="icon" href="images/logo.webp" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+
+<script type="text/javascript">
+				
+				  function general() {
+				  var x = document.getElementById("general");
+				  if (x.style.display === "none") {
+					x.style.display = "block";
+					$("#police").hide();
+					$("#criminal").hide();
+				  } 
+				}
+				
+				function police() {
+				  var x = document.getElementById("police");
+				  if (x.style.display === "none") {
+					x.style.display = "block";
+					$("#general").hide();
+					$("#criminal").hide();
+				  } 
+				}
+				
+				function criminal() {
+				  var x = document.getElementById("criminal");
+				  if (x.style.display === "none") {
+					x.style.display = "block";
+					$("#police").hide();
+					$("#general").hide();
+				  } 
+				}
+					
+		</script>
+      <style>
+        body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #1a1a1a;
+        color: #ccc;
+        margin: 0;
+        padding: 0;
+        }
+        .rules-container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        }
+        h1 {
+        color: #dc3545;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        .category {
+        margin-top: 30px;
+        }
+        .category h2 {
+        color: #dc3545;
+        font-size: 24px;
+        border-bottom: 2px solid #dc3545;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        }
+        .rule-item {
+        padding: 10px;
+        background-color: #1a1a1a;
+        border-left: 4px solid #dc3545;
+        color: white;
+        border-radius: 3px;
+        margin-bottom: 15px;
+        }
+        .rule-item b {
+        margin-top: 0;
+        font-size: 28px;
+        color: rgb(250, 0, 0);
+        }
+        .rule-item p {
+        margin-bottom: 0;
+        color: white;
+        font-size: 14px;
+        }
+     </style>
+</head>
+
+<body class="dark-layout" style="image-rendering: pixelated;">
+
+<div class="page-wrapper">
+    <div class="preloader">
+        <div class="icon"></div>
     </div>
-      
-      <main>
-         <div class="rules-container">
-            <div class="category">
-               <h2>Police Rules</h2>
-               <ul>
-                  <li class="rule-item">
-                     <h3>Καταδίωξη</h3>
-                     <p >Σε περίπτωση καταδίωξης που έχει περάσει το χρονικό όριο των 5 ΛΕΠΤΩΝ, η ΕΛ.ΑΣ μπορεί να κάνει PIT εάν και εφόσον ο δράστης που καταδιώκεται αποτελέσει Δημόσιο Κίνδυνο ή απειληθεί η ζωή του αστυνόμου. Εάν ο δράστης δεν κάνει κάτι από τα παραπάνω η καταδίωξη συνεχίζεται μέχρι τελικής πτώσης!</p>
-                     <br>
-                     <p style="font-size: 14px; color: red;">Σε περίπτωση που κάποιος criminal επιχειρίσει να κάνει pit μια δίκυκλη μηχανή, θεωρείται αυτομάτως απόπειρα δολοφονίας αστυνομικού και η ΕΛ.ΑΣ έχει το δικαίωμα να σκάσει λάστιχα</p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>Ληστίες</h3>
-                     <p >
-                        1) Mini-Market/Shops: Με Όμηρο : Οι Criminals από 1 έως 3 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
-                        Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1 
-                     </p>
-                     <br>
-                     <p > 2) Ληστεία PALETO Bank + Κοσμηματοπωλείο : Με όμηρο: οι Criminals από 4 έως 5 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
-                        Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
-                     </p>
-                     <br>
-                     <p >  3) Ληστεία Κεντρικής Τράπεζας: Με όμηρο : οι Criminals από 6 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
-                        Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
-                     </p>
-                     <br>
-                     <p >  4) (Όσον αφορά τις ληστείες με όμηρο, στο +2 της ΕΛ.ΑΣ το 1 άτομο αποτελεί ο ΔΙΑΠΡΑΓΜΑΤΕΥΤΗΣ ο οποίος μεταβαίνει ΑΟΠΛΟΣ και ΑΠΑΓΟΡΕΥΕΤΑΙ να παρθεί Όμηρος κατά τη διάρκεια της Ληστείας)</p>
-                     <br>
-                     <p >  5) Όλες οι ΛΗΣΤΕΙΕΣ είναι Hit & Run που σημαίνει ότι αν δεν φτάσει εγκαίρως η ΕΛ.ΑΣ. ,οι Δράστες μπορούν να φύγουν με τα Κλοπιμαία!</p>
-                     <br>
-                     <p > 6) Σε περίπτωση που εμφανιστεί η ΕΛ.ΑΣ. και οι Ληστές ΕΧΟΥΝ ΟΜΗΡΟ, θα ΠΡΕΠΕΙ να πραγματοποιηθεί η ΔΙΑΠΡΑΓΜΑΤΕΥΣΗ! Οι Ληστές Μπορούν να ζητήσουν έως 3 Αιτήματα από τα οποία η ΕΛ.ΑΣ. θα κάνει ΤΟΥΛΑΧΙΣΤΟΝ 1 ΔΕΚΤΟ & τα υπόλοιπα είναι στη κριση της!</p>
-                     <br>
-                     <p >  7) Σε ληστεία χωρίς όμηρο οι Δράστες μπορούν να τραπούν σε φυγή χωρίς να απειλήσουν την ΕΛ.ΑΣ και να πραγματοποιηθεί το σενάριο της καταδίωξης , διαφορετικά θα πρέπει να εξουδετερώσουν τις μονάδες της ΕΛ.ΑΣ για να μπορέσουν να διαφύγουν!</p>
-                     <br>
-                     <p style="font-size: 14px; color: red;">   Ο κάθε αστυνομικός που συμμετέχει στην Ληστεία ΕΠΙΤΡΕΠΕΤΑΙ να βάλει έως 1 σειρά ΚΑΡΦΙΑ!</p>
-                     <br>
-                     <p style="font-size: 14px; color: red;">  Για την καταδίωξη σε Ληστεία ισχύει το rule της καταδίωξης πιο πάνω!</p>
-                     <br>
-                     <p style="font-size: 14px; color: red;"> Σε περίπτωση ληστείας οι δράστες είναι υποχρεωμένοι να αναφέρουν στο robbery chat το δυναμικό τους και πόσους ομήρουν έχουν στην διάθεση τους</p>
-                     <br>
-                  </li>
-                  <li class="rule-item">
-                     <h3>Ομηρία Πολίτη:</h3>
-                     <p >Οι Criminals θα ΠΡΕΠΕΙ να είναι από 2 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Απαγωγείς)</p>
-                     <br>
-                     <p style="font-size: 14px; color: red;"> Το ποσό των Λύτρων θα πρέπει να είναι σε λογικά πλαίσια</p>
-                     <br>
-                     <h3>Ομηρία  Αστυνομικού:</h3>
-                     <p >Oι Criminals θα ΠΡΕΠΕΙ να είναι από 3 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι UNLIMITED)</p>
-                     <br>
-                     <p >(Για ομηρια αστυνομικου χρειαζεται να υπαρχει διαθεσιμο προσωπικο 8 Αστυνομικων εντός πόλης!)
-                        Το ποσό των Λύτρων για την Απαγωγή Αστυνομικού θα πρέπει να βρίσκεται σε λογικά πλαίσια
-                     </p>
-                     <br>
-                     <p >(Στις ομηρίες , απο το +2 της ΕΛ.ΑΣ το 1 άτομο αποτελεί ο ΔΙΑΠΡΑΓΜΑΤΕΥΤΗΣ)</p>
-                     <br>
-                     <p style="font-size: 14px; color: red;">Οι Υπάλληλοι του ΕΚΑΒ δεν μπορούν να απαχθούν</p>
-                     <br>
-                  </li>
-                  <li class="rule-item">
-                     <h3>Συλλήψεις</h3>
-                     <p >
-                        Από την στιγμή που η ΕΛ.ΑΣ. πραγματοποιήσει Σύλληψη ενός CRIMINAL, η ομάδα του ΔΕΝ ΜΠΟΡΕΙ να Εμπλακεί & να <
-                        <χτυπήσει >
-                        > την Αστυνομία εάν δεν ήταν παρόν στο σημείο της σύλληψης !
-                     </p>
-                     <br>
-                  </li>
-                  <li class="rule-item">
-                     <h3>Μεταγωγή Κρατούμενου</h3>
-                     <p >Η μεταγωγή Κρατούμενου Θα ξεκινάει από την ΕΛ.ΑΣ. έπειτα από σχετική ανακοίνωση (PLC)!
-                        Στην Μεταγωγή οι Criminals θα μπορούν να είναι έως 10 άτομα για να την χτυπήσουν ενώ η ΕΛ.ΑΣ. έως 15 άτομα για να την πραγματοποιήσει!
-                     </p>
-                     <br>
-                     <p style="font-size: 14px; color: red;">(ΑΠΟ ΤΗΝ ΣΤΙΓΜΗ ΠΟΥ Η ΕΛ.ΑΣ. ΠΕΡΑΣΕΙ ΤΟΝ ΚΡΑΤΟΥΜΕΝΟ ΕΝΤΟΣ ΤΩΝ ΦΥΛΑΚΩΝ Η ΜΕΤΑΓΩΓΗ ΤΕΛΕΙΩΝΕΙ ΑΜΕΣΑ ΚΑΙ ΤΟΥ ΕΠΙΒΑΛΛΕΤΑΙ Η ΠΟΙΝΗ ΤΟΥ!)
-                     </p>
-                     <br>
-                  </li>
-                  <li class="rule-item">
-                     <h3>OPEN-UP</h3>
-                     <p >-Σε περίπτωση OPEN-UP, η επιχείρηση της ΕΛ.ΑΣ. για να διερευνήσει την Οικία μίας Εγκληματικής Οργάνωσης θα ξεκινάει έπειτα από σχετική Ανακοίνωση (PLC)!
-                     </p>
-                     <br>
-                     <p >ΚΑΤΑ την Διάρκεια του Open-Up οι Criminals θα μπορούν να είναι έως 15 άτομα για να Υπερασπιστούν την Οικία τους, ενώ η ΕΛ.ΑΣ. έως 20 άτομα για να διεξάγει την Επιχείρηση!
-                     </p>
-                     <p style="font-size: 14px; color: red;">Η ΕΛ.ΑΣ. ΑΠΑΓΟΡΕΥΕΤΑΙ να πυροβολήσει πρώτη παρά μόνο εάν Στοχευθεί ή Χτυπηθεί Αστυνομικός από Πυρά Criminal!
-                     </p>
-                     <br>
-                  </li>
-               </ul>
+    <header class="main-header header-style-two">
+        <div class="header-container">
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner clearfix">
+                        <div class="top-left">
+                            <ul class="info clearfix">
+                                <li>MostWanted® Roleplay | <b style="color:#ff0000;text-shadow:0 0 12px">Online</b> [300/300]</li>
+                              
+                            </ul>
+                        </div>
+                        <div class="top-right">
+                            <div class="social-links">
+                                <ul class="clearfix">
+                                    <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-discord"></span></a></li>
+                                    <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-tiktok"></span></a></li>
+                                    <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-youtube"></span></a></li>
+                                    <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a href="https://www.instagram.com/MostWanted®roleplayofficial/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="category">
-               <h2>General Rules</h2>
-               <ul>
-                  <li class="rule-item">
-                     <h3>RDM</h3>
-                     <p>Απαγορεύεται το Random Death-Match, δηλαδή να σκοτώσεις κάποιον δίχως να έχει προηγηθεί κάποιο roleplay.
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>VDM</h3>
-                     <p>Απαγορεύεται το vehicle deathmatch, δηλαδή να χτυπήσεις ή και να σκοτώσεις κάποιον με πρόθεση με το όχημα σου
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>0 VOL</h3>
-                     <p>Απαγορεύεται να ΜΗΝ κάνεις value of life δηλαδή να μην σέβεσαι την ζωή σου. H Ζωή σου ειναι το υψηλότερο αγαθό οτι role play και να παίζεις.
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>NLR</h3>
-                     <p>Είναι υποχρεωτικό να κάνεις New Life Rule δηλαδή αν πεθάνεις τότε η μνήμη σου διαγράφεται, άρα ξεχνάς ότι σε οδήγησε μέχρι το θανάτο σου.
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>ΜETAGAMING</h3>
-                     <p>Η διάδοση πληροφοριών όπου αποκτήθηκαν εκτός παιχνιδιού, όπως για παράδειγμα σε Streams, Discord κτλ. , μέσα στο παιχνίδι.
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>CIVILIAN JOB</h3>
-                     <p>Απαγορεύεται να κάνεις criminal action όπου παίζεται civilian RP: Μαγαζιά , Civilian Job, κτλ.
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>Out Of Character - Σπάσημο χαρακτήρα </h3>
-                     <p>Απαγορεύεται το out of character - Σπάσιμο χαρακτήρα, δηλαδή να μιλάτε για IRL (Πραγματικής ζωής) πραγματα μέσα στο game. ΠΧ ('αν ημουν πληκρολόγιο', 'σε ενα παράληλο σύμπαν', 'στείλε μια τελεία εκεί' )
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>COMBAT LOG</h3>
-                     <p>Απαγορεύεται να βγαίνεις από τον Server ενώ υπάρχει ενεργό σενάριο.
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>MORE</h3>
-                     <p>
-                        Απαγορεύεται το Stream Snipe.
-                        Απαγορεύεται το ανούσιο role play (πχ.ψηλά τα χέρια σε κλέβω)
-                        Πρέπει να υπάρχει κάποιο στοιχειώδες RP για να μπορέιτε να κάνετε Criminal Interact με Civilian.
-                        Απαγορεύονται τα ρατσιστικά, σεξουαλικα σχόλια και οι βρισιές σε Οικογένεια και Θεία
-                        Η άρνηση RP τιμωρείται.
-                        Fear of police. Όλοι πρέπει να σέβονται και να ''φοβούνται'' την Αστυνομία.
-                        Σκηνικά  shoot out μετά το restart δεν συνεχίζονται ( μόνο αν έχετε war ενεργό ).
-                        Απαγορεύτε η κλοπή Civilian
-                     </p>
-                  </li>
-               </ul>
+            <div class="header-lower">
+                <div class="auto-container">
+                    <div class="lower-inner clearfix">
+                        <div class="logo-box">
+                            <div class="logo"><a title="MostWanted® - GTA V Roleplay Server - FiveM"><img src="images/logo.webp" alt="MostWanted® - GTA V Roleplay Server - FiveM" title="MostWanted® - GTA V Roleplay Server - FiveM" ></a></div>
+                        </div>
+                        <div class="nav-outer clearfix">
+                            <div class="mobile-nav-toggler"><span style="color:#ec2121" class="fas fa-bars"></span></div>
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                                        <li class="current"><a href="rules.html">ΚΑΝΟΝΕΣ</a></li>
+                                        <li><a href="applications.html">APPLICATIONS</a></li>
+                                    </ul>
+                                    <ul class="navigation clearfix">
+                                        <li><a href="" style="color:#ff2f18;text-shadow:0 0 20px #ff2f18;">ΠΑΙΞΕ ΤΩΡΑ</a></li>
+                                        <li><a href="https://discord.com/invite/mostwantedroleplay" target="_blank" style="color:#5a75fe;text-shadow:0 0 20px #5a75fe;">DISCORD</a></li>
+                                        <li><a href="donates.html" style="color:#f8c613;text-shadow:0 0 20px #f8c613;">DONATES</a></li>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="category">
-               <h2>Criminal Rules</h2>
-               <ul>
-                  <li class="rule-item">
-                     <h3>Ορια</h3>
-                     <p>Το όριο ατόμων σε ένα Criminal σκηνικό ειναι τα 8 άτομα. (Μπορεί να αλλάξει)</p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>CRIMINAL FIGHT</h3>
-                     <p>
-                        Μεταξύ Criminal ισχύει ο κανόνας των 2 λεπτών.
-                        Απαγορεύονται τα No water NO bush, NO tress, No props είναι BANABLE
-                        Cheat η 3rd Party Program ειναί Permanent 
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3>CRIMINAL ACTIVITY </h3>
-                     <p>
-                        Θα πρέπει σε κάθε criminal activity που κάνετε, να φοράτε των ρουχισμό της ομάδας σας, όπως στά : (Ναρκωτικά,Procces,(event) fight κτλ)
-                     </p>
-                  </li>
-                  <li class="rule-item">
-                     <h3> Robberies</h3>
-                     <p>1) Mini-Market/Shops: Με Όμηρο : Οι Criminals από 1 έως 3 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
-                        Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
-                     </p>
-                     <br>
-                     <p>2) Ληστεία PALETO Bank + Κοσμηματοπωλείο : Με όμηρο: οι Criminals από 4 έως 5 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
-                        Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
-                     </p>
-                     <br>
-                     <p>3) Ληστεία Κεντρικής Τράπεζας:
-                        Με όμηρο : οι Criminals από 6 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
-                        Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
-                     </p>
-                     <br>
-                     <p>4) (Όσον αφορά τις ληστείες με όμηρο, στο +2 της ΕΛ.ΑΣ το 1 άτομο αποτελεί ο ΔΙΑΠΡΑΓΜΑΤΕΥΤΗΣ ο οποίος μεταβαίνει ΑΟΠΛΟΣ και ΑΠΑΓΟΡΕΥΕΤΑΙ να παρθεί Όμηρος κατά τη διάρκεια της Ληστείας)
-                     </p>
-                     <br>
-                     <p>5) Όλες οι ΛΗΣΤΕΙΕΣ είναι Hit & Run που σημαίνει ότι αν δεν φτάσει εγκαίρως η ΕΛ.ΑΣ. ,οι Δράστες μπορούν να φύγουν με τα Κλοπιμαία!
-                     </p>
-                     <br>
-                     <p>6) Σε περίπτωση που εμφανιστεί η ΕΛ.ΑΣ. και οι Ληστές ΕΧΟΥΝ ΟΜΗΡΟ, θα ΠΡΕΠΕΙ να πραγματοποιηθεί η ΔΙΑΠΡΑΓΜΑΤΕΥΣΗ! Οι Ληστές Μπορούν να ζητήσουν έως 3 Αιτήματα από τα οποία η ΕΛ.ΑΣ. θα κάνει ΤΟΥΛΑΧΙΣΤΟΝ 1 ΔΕΚΤΟ & τα υπόλοιπα είναι στη κριση της!
-                     </p>
-                     <br>
-                     <p>7) Σε ληστεία χωρίς όμηρο οι Δράστες μπορούν να τραπούν σε φυγή χωρίς να απειλήσουν την ΕΛ.ΑΣ και να πραγματοποιηθεί το σενάριο της καταδίωξης, διαφορετικά θα πρέπει να εξουδετερώσουν τις μονάδες της ΕΛ.ΑΣ για να μπορέσουν να διαφύγουν!
-                     </p>
-                     <br>
-                     <p style="color: red;">Σε περίπτωση ληστείας οι δράστες είναι υποχρεωμένοι να αναφέρουν στο robbery chat το δυναμικό τους και πόσους ομήρουν έχουν στην διάθεση τους
-                     </p>
-                  </li>
-               </ul>
+        </div>
+        <div class="sticky-header">
+            <div class="auto-container clearfix">
+                <div class="logo pull-left">
+                    <a title=""><img src="images/logo.webp" alt="" title=""></a>
+                </div>
+                <div class="pull-right">
+                    <nav class="main-menu clearfix">
+                    </nav>
+                </div>
             </div>
-         </div>
-      </main>
-      <footer class="footer">
-         <div class="container">
-            <div class="footer-content">
-               <div class="footer-column">
-                  <div class="widget">
-                     <h4>ΣΥΝΔΕΣΜΟΙ</h4>
-                     <ul>
-                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i> <span class="icon-text">Αρχική</span></a></li>
-<!--                         <li class="nav-item"><a id="puipLink" class="nav-link" href="fivem://connect/ip"><i class="fas fa-play"></i> <span class="icon-text">Παίξε τώρα</span></a></li> -->
-                        <li class="nav-item"><a class="nav-link" href="rules.html"><i class="fas fa-book"></i> <span class="icon-text">Κανόνες</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="donates.html"><i class="fas fa-donate"></i> <span class="icon-text">Donates</span></a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="footer-column">
-                  <div class="about">
-                     <h3>MostWanted® Roleplay</h3>
-                     <p>Ο MostWanted® Roleplay φέρνει την ατμόσφαιρα του GTA RP στο FiveM με απίστευτες περιπέτειες και ατελείωτες δυνατότητες. Συνδεθείτε για να ζήσετε το δικό σας σενάριο, να συνάψετε συμμαχίες και να απολαύσετε το ρεαλιστικότερο GTA RP περιβάλλον στο FiveM.</p>
-                  </div>
-               </div>
-               <div class="footer-column">
-                  <div class="widget">
-                     <h4>Υποστήριξη</h4>
-                     <ul>
-                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/mostwantedroleplay"><i class="fab fa-discord"></i> <span class="icon-text">Discord</span></a></li>
-                     </ul>
-                  </div>
-               </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="close-btn"><span style="color:#ec2121" class="fas fa-times"></span></span></div>
+            <nav class="menu-box">
+                <div class="nav-logo"><a><img src="images/logo.webp" alt="" title=""></a></div>
+                <div class="menu-outer">
+                </div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-discord"></span></a></li>
+                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-tiktok"></span></a></li>
+                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="https://www.instagram.com/MostWanted®roleplayofficial/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+        <section  style="height:180px">
+                <div class="image-layer first-layer" style="background-image:url(images/background.jpg)"></div>
+                <div class="image-layer2 second-layer" style="background-image:url(images/footer-bg.jpg)"></div>
+        </section>
+        <section class="about-section-two" style="margin-top:-70px;">
+            <div class="auto-container">
+                <div class="platforms" style="margin-bottom:-20px;">
+                    <div class="row clearfix">
+                        <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><span style="color:#f92d2d" class="fas fa-heartbeat"></span></div>
+                                <div class="inner">
+                                        <span class="upper-span">ΕΝΕΡΓΑ STAFF</span>
+                                        <span class="lower-span">24 / 7 ONLINE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="900ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><span style="color:#f92d2d" class="fas fa-user"></span></div>
+                                <div class="inner">
+                                        <span class="upper-span">ΜΟΝΑΔΙΚΑ</span>
+                                        <span class="lower-span">ΕΠΑΓΓΕΛΜΑΤΑ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="600ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><span style="color:#f92d2d" class="fas fa-network-wired"></span></div>
+                                <div class="inner">
+                                        <span class="upper-span">ΙΣΧΥΡΗ DDOS</span>
+                                        <span class="lower-span">ΠΡΟΣΤΑΣΙΑ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </section>
+            <div class="mid-row">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="text-col col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="2000ms" data-wow-delay="0ms" style="margin-top:-60px">
+                            <div class="inner">
+								<div id="general">
+									<div class="sec-title">
+										<div class="upper-text">MostWanted©</div>
+										<h2>General Rules</h2>
+
+									</div>
+									<div class="text">
+										<p>
+                                            <ul>
+                                                <li class="rule-item">
+                                                   <b>RDM</b>
+                                                   <p>Απαγορεύεται το Random Death-Match, δηλαδή να σκοτώσεις κάποιον δίχως να έχει προηγηθεί κάποιο roleplay.
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>VDM</b>
+                                                   <p>Απαγορεύεται το vehicle deathmatch, δηλαδή να χτυπήσεις ή και να σκοτώσεις κάποιον με πρόθεση με το όχημα σου
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>0 VOL</b>
+                                                   <p>Απαγορεύεται να ΜΗΝ κάνεις value of life δηλαδή να μην σέβεσαι την ζωή σου. H Ζωή σου ειναι το υψηλότερο αγαθό οτι role play και να παίζεις.
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>NLR</b>
+                                                   <p>Είναι υποχρεωτικό να κάνεις New Life Rule δηλαδή αν πεθάνεις τότε η μνήμη σου διαγράφεται, άρα ξεχνάς ότι σε οδήγησε μέχρι το θανάτο σου.
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>ΜETAGAMING</b>
+                                                   <p>Η διάδοση πληροφοριών όπου αποκτήθηκαν εκτός παιχνιδιού, όπως για παράδειγμα σε Streams, Discord κτλ. , μέσα στο παιχνίδι.
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>CIVILIAN JOB</b>
+                                                   <p>Απαγορεύεται να κάνεις criminal action όπου παίζεται civilian RP: Μαγαζιά , Civilian Job, κτλ.
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>Out Of Character - Σπάσημο χαρακτήρα </b>
+                                                   <p>Απαγορεύεται το out of character - Σπάσιμο χαρακτήρα, δηλαδή να μιλάτε για IRL (Πραγματικής ζωής) πραγματα μέσα στο game. ΠΧ ('αν ημουν πληκρολόγιο', 'σε ενα παράληλο σύμπαν', 'στείλε μια τελεία εκεί' )
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>COMBAT LOG</b>
+                                                   <p>Απαγορεύεται να βγαίνεις από τον Server ενώ υπάρχει ενεργό σενάριο.
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>MORE</b>
+                                                   <p>
+                                                      Απαγορεύεται το Stream Snipe.
+                                                      Απαγορεύεται το ανούσιο role play (πχ.ψηλά τα χέρια σε κλέβω)
+                                                      Πρέπει να υπάρχει κάποιο στοιχειώδες RP για να μπορέιτε να κάνετε Criminal Interact με Civilian.
+                                                      Απαγορεύονται τα ρατσιστικά, σεξουαλικα σχόλια και οι βρισιές σε Οικογένεια και Θεία
+                                                      Η άρνηση RP τιμωρείται.
+                                                      Fear of police. Όλοι πρέπει να σέβονται και να ''φοβούνται'' την Αστυνομία.
+                                                      Σκηνικά  shoot out μετά το restart δεν συνεχίζονται ( μόνο αν έχετε war ενεργό ).
+                                                      Απαγορεύτε η κλοπή Civilian
+                                                   </p>
+                                                </li>
+                                             </ul>
+									</div>
+								</div>
+								<div id="police" style="display:none;">
+									<div class="sec-title">
+										<div class="upper-text">MostWanted©</div>
+										<h2>Police Rules</h2>
+									</div>
+									<div class="text">
+										<p>
+                                            <ul>
+                                                <li class="rule-item">
+                                                   <b>Καταδίωξη</b>
+                                                   <p >Σε περίπτωση καταδίωξης που έχει περάσει το χρονικό όριο των 5 ΛΕΠΤΩΝ, η ΕΛ.ΑΣ μπορεί να κάνει PIT εάν και εφόσον ο δράστης που καταδιώκεται αποτελέσει Δημόσιο Κίνδυνο ή απειληθεί η ζωή του αστυνόμου. Εάν ο δράστης δεν κάνει κάτι από τα παραπάνω η καταδίωξη συνεχίζεται μέχρι τελικής πτώσης!</p>
+                                                   <br>
+                                                   <p style="font-size: 14px; color: red;">Σε περίπτωση που κάποιος criminal επιχειρίσει να κάνει pit μια δίκυκλη μηχανή, θεωρείται αυτομάτως απόπειρα δολοφονίας αστυνομικού και η ΕΛ.ΑΣ έχει το δικαίωμα να σκάσει λάστιχα</p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>Ληστίες</b>
+                                                   <p >
+                                                      1) Mini-Market/Shops: Με Όμηρο : Οι Criminals από 1 έως 3 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
+                                                      Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1 
+                                                   </p>
+                                                   <br>
+                                                   <p > 2) Ληστεία PALETO Bank + Κοσμηματοπωλείο : Με όμηρο: οι Criminals από 4 έως 5 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
+                                                      Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
+                                                   </p>
+                                                   <br>
+                                                   <p >  3) Ληστεία Κεντρικής Τράπεζας: Με όμηρο : οι Criminals από 6 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
+                                                      Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
+                                                   </p>
+                                                   <br>
+                                                   <p >  4) (Όσον αφορά τις ληστείες με όμηρο, στο +2 της ΕΛ.ΑΣ το 1 άτομο αποτελεί ο ΔΙΑΠΡΑΓΜΑΤΕΥΤΗΣ ο οποίος μεταβαίνει ΑΟΠΛΟΣ και ΑΠΑΓΟΡΕΥΕΤΑΙ να παρθεί Όμηρος κατά τη διάρκεια της Ληστείας)</p>
+                                                   <br>
+                                                   <p >  5) Όλες οι ΛΗΣΤΕΙΕΣ είναι Hit & Run που σημαίνει ότι αν δεν φτάσει εγκαίρως η ΕΛ.ΑΣ. ,οι Δράστες μπορούν να φύγουν με τα Κλοπιμαία!</p>
+                                                   <br>
+                                                   <p > 6) Σε περίπτωση που εμφανιστεί η ΕΛ.ΑΣ. και οι Ληστές ΕΧΟΥΝ ΟΜΗΡΟ, θα ΠΡΕΠΕΙ να πραγματοποιηθεί η ΔΙΑΠΡΑΓΜΑΤΕΥΣΗ! Οι Ληστές Μπορούν να ζητήσουν έως 3 Αιτήματα από τα οποία η ΕΛ.ΑΣ. θα κάνει ΤΟΥΛΑΧΙΣΤΟΝ 1 ΔΕΚΤΟ & τα υπόλοιπα είναι στη κριση της!</p>
+                                                   <br>
+                                                   <p >  7) Σε ληστεία χωρίς όμηρο οι Δράστες μπορούν να τραπούν σε φυγή χωρίς να απειλήσουν την ΕΛ.ΑΣ και να πραγματοποιηθεί το σενάριο της καταδίωξης , διαφορετικά θα πρέπει να εξουδετερώσουν τις μονάδες της ΕΛ.ΑΣ για να μπορέσουν να διαφύγουν!</p>
+                                                   <br>
+                                                   <p style="font-size: 14px; color: red;">   Ο κάθε αστυνομικός που συμμετέχει στην Ληστεία ΕΠΙΤΡΕΠΕΤΑΙ να βάλει έως 1 σειρά ΚΑΡΦΙΑ!</p>
+                                                   <br>
+                                                   <p style="font-size: 14px; color: red;">  Για την καταδίωξη σε Ληστεία ισχύει το rule της καταδίωξης πιο πάνω!</p>
+                                                   <br>
+                                                   <p style="font-size: 14px; color: red;"> Σε περίπτωση ληστείας οι δράστες είναι υποχρεωμένοι να αναφέρουν στο robbery chat το δυναμικό τους και πόσους ομήρουν έχουν στην διάθεση τους</p>
+                                                   <br>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>Ομηρία Πολίτη:</b>
+                                                   <p >Οι Criminals θα ΠΡΕΠΕΙ να είναι από 2 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Απαγωγείς)</p>
+                                                   <br>
+                                                   <p style="font-size: 14px; color: red;"> Το ποσό των Λύτρων θα πρέπει να είναι σε λογικά πλαίσια</p>
+                                                   <br>
+                                                   <b>Ομηρία  Αστυνομικού:</b>
+                                                   <p >Oι Criminals θα ΠΡΕΠΕΙ να είναι από 3 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι UNLIMITED)</p>
+                                                   <br>
+                                                   <p >(Για ομηρια αστυνομικου χρειαζεται να υπαρχει διαθεσιμο προσωπικο 8 Αστυνομικων εντός πόλης!)
+                                                      Το ποσό των Λύτρων για την Απαγωγή Αστυνομικού θα πρέπει να βρίσκεται σε λογικά πλαίσια
+                                                   </p>
+                                                   <br>
+                                                   <p >(Στις ομηρίες , απο το +2 της ΕΛ.ΑΣ το 1 άτομο αποτελεί ο ΔΙΑΠΡΑΓΜΑΤΕΥΤΗΣ)</p>
+                                                   <br>
+                                                   <p style="font-size: 14px; color: red;">Οι Υπάλληλοι του ΕΚΑΒ δεν μπορούν να απαχθούν</p>
+                                                   <br>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>Συλλήψεις</b>
+                                                   <p >
+                                                      Από την στιγμή που η ΕΛ.ΑΣ. πραγματοποιήσει Σύλληψη ενός CRIMINAL, η ομάδα του ΔΕΝ ΜΠΟΡΕΙ να Εμπλακεί & να <
+                                                      <χτυπήσει >
+                                                      > την Αστυνομία εάν δεν ήταν παρόν στο σημείο της σύλληψης !
+                                                   </p>
+                                                   <br>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>Μεταγωγή Κρατούμενου</b>
+                                                   <p >Η μεταγωγή Κρατούμενου Θα ξεκινάει από την ΕΛ.ΑΣ. έπειτα από σχετική ανακοίνωση (PLC)!
+                                                      Στην Μεταγωγή οι Criminals θα μπορούν να είναι έως 10 άτομα για να την χτυπήσουν ενώ η ΕΛ.ΑΣ. έως 15 άτομα για να την πραγματοποιήσει!
+                                                   </p>
+                                                   <br>
+                                                   <p style="font-size: 14px; color: red;">(ΑΠΟ ΤΗΝ ΣΤΙΓΜΗ ΠΟΥ Η ΕΛ.ΑΣ. ΠΕΡΑΣΕΙ ΤΟΝ ΚΡΑΤΟΥΜΕΝΟ ΕΝΤΟΣ ΤΩΝ ΦΥΛΑΚΩΝ Η ΜΕΤΑΓΩΓΗ ΤΕΛΕΙΩΝΕΙ ΑΜΕΣΑ ΚΑΙ ΤΟΥ ΕΠΙΒΑΛΛΕΤΑΙ Η ΠΟΙΝΗ ΤΟΥ!)
+                                                   </p>
+                                                   <br>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>OPEN-UP</b>
+                                                   <p >-Σε περίπτωση OPEN-UP, η επιχείρηση της ΕΛ.ΑΣ. για να διερευνήσει την Οικία μίας Εγκληματικής Οργάνωσης θα ξεκινάει έπειτα από σχετική Ανακοίνωση (PLC)!
+                                                   </p>
+                                                   <br>
+                                                   <p >ΚΑΤΑ την Διάρκεια του Open-Up οι Criminals θα μπορούν να είναι έως 15 άτομα για να Υπερασπιστούν την Οικία τους, ενώ η ΕΛ.ΑΣ. έως 20 άτομα για να διεξάγει την Επιχείρηση!
+                                                   </p>
+                                                   <p style="font-size: 14px; color: red;">Η ΕΛ.ΑΣ. ΑΠΑΓΟΡΕΥΕΤΑΙ να πυροβολήσει πρώτη παρά μόνο εάν Στοχευθεί ή Χτυπηθεί Αστυνομικός από Πυρά Criminal!
+                                                   </p>
+                                                   <br>
+                                                </li>
+                                             </ul>
+								
+										</p>
+									</div>
+								</div>
+								<div id="criminal" style="display:none;">
+									<div class="sec-title">
+										<div class="upper-text">MostWanted©</div>
+										<h2>Criminal Rules</h2>
+									</div>
+									<div class="text">
+										<p>
+                                            <ul>
+                                                <li class="rule-item">
+                                                   <b>Ορια</b>
+                                                   <p>Το όριο ατόμων σε ένα Criminal σκηνικό ειναι τα 8 άτομα. (Μπορεί να αλλάξει)</p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>CRIMINAL FIGHT</b>
+                                                   <p>
+                                                      Μεταξύ Criminal ισχύει ο κανόνας των 2 λεπτών.
+                                                      Απαγορεύονται τα No water NO bush, NO tress, No props είναι BANABLE
+                                                      Cheat η 3rd Party Program ειναί Permanent 
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b>CRIMINAL ACTIVITY </b>
+                                                   <p>
+                                                      Θα πρέπει σε κάθε criminal activity που κάνετε, να φοράτε των ρουχισμό της ομάδας σας, όπως στά : (Ναρκωτικά,Procces,(event) fight κτλ)
+                                                   </p>
+                                                </li>
+                                                <li class="rule-item">
+                                                   <b> Robberies</b>
+                                                   <p>1) Mini-Market/Shops: Με Όμηρο : Οι Criminals από 1 έως 3 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
+                                                      Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
+                                                   </p>
+                                                   <br>
+                                                   <p>2) Ληστεία PALETO Bank + Κοσμηματοπωλείο : Με όμηρο: οι Criminals από 4 έως 5 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
+                                                      Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
+                                                   </p>
+                                                   <br>
+                                                   <p>3) Ληστεία Κεντρικής Τράπεζας:
+                                                      Με όμηρο : οι Criminals από 6 έως 8 άτομα, (με την ΕΛ.ΑΣ. να είναι +2 από τους Ληστές)
+                                                      Εάν η ληστεία γίνει χωρίς όμηρο η ΕΛ.ΑΣ θα είναι +1
+                                                   </p>
+                                                   <br>
+                                                   <p>4) (Όσον αφορά τις ληστείες με όμηρο, στο +2 της ΕΛ.ΑΣ το 1 άτομο αποτελεί ο ΔΙΑΠΡΑΓΜΑΤΕΥΤΗΣ ο οποίος μεταβαίνει ΑΟΠΛΟΣ και ΑΠΑΓΟΡΕΥΕΤΑΙ να παρθεί Όμηρος κατά τη διάρκεια της Ληστείας)
+                                                   </p>
+                                                   <br>
+                                                   <p>5) Όλες οι ΛΗΣΤΕΙΕΣ είναι Hit & Run που σημαίνει ότι αν δεν φτάσει εγκαίρως η ΕΛ.ΑΣ. ,οι Δράστες μπορούν να φύγουν με τα Κλοπιμαία!
+                                                   </p>
+                                                   <br>
+                                                   <p>6) Σε περίπτωση που εμφανιστεί η ΕΛ.ΑΣ. και οι Ληστές ΕΧΟΥΝ ΟΜΗΡΟ, θα ΠΡΕΠΕΙ να πραγματοποιηθεί η ΔΙΑΠΡΑΓΜΑΤΕΥΣΗ! Οι Ληστές Μπορούν να ζητήσουν έως 3 Αιτήματα από τα οποία η ΕΛ.ΑΣ. θα κάνει ΤΟΥΛΑΧΙΣΤΟΝ 1 ΔΕΚΤΟ & τα υπόλοιπα είναι στη κριση της!
+                                                   </p>
+                                                   <br>
+                                                   <p>7) Σε ληστεία χωρίς όμηρο οι Δράστες μπορούν να τραπούν σε φυγή χωρίς να απειλήσουν την ΕΛ.ΑΣ και να πραγματοποιηθεί το σενάριο της καταδίωξης, διαφορετικά θα πρέπει να εξουδετερώσουν τις μονάδες της ΕΛ.ΑΣ για να μπορέσουν να διαφύγουν!
+                                                   </p>
+                                                   <br>
+                                                   <p style="color: red;">Σε περίπτωση ληστείας οι δράστες είναι υποχρεωμένοι να αναφέρουν στο robbery chat το δυναμικό τους και πόσους ομήρουν έχουν στην διάθεση τους
+                                                   </p>
+                                                </li>
+                                             </ul>
+										</p>
+									</div>
+								</div>
+								
+						
+								
+								
+                            </div>
+                        </div>
+                        <!--Image Column-->
+                        <div class="image-col col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="2000ms" data-wow-delay="0ms">
+                            <div class="inner">
+                                <div class="images clearfix">
+									
+									<a style="background: #fb381e;" onclick="general()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">General Rules</span></span></a>
+									<a style="background: #3885fa;" onclick="police()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">Police Rules</span></span></a><br/>
+									<a style="background: #211157;" onclick="criminal()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">Criminal Rules</span></span></a>
+									
+									
+									
+									
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-bottom text-center">
-               <hr />
-               <p>
-                  Πνευματικά δικαιώματα &copy;<script>document.write(new Date().getFullYear());</script> Όλα τα δικαιώματα διατηρούνται
-               </p>
+
+        </div>
+    </section>
+
+
+    <section class="main-footer">
+        <div class="image-layer" style="background-image:url(images/background.jpg)"></div>
+        <div class="widgets-section">
+            <div class="auto-container">
+                <div class="inner">
+                    <div class="copyright">Copyright &copy; 2024 MostWanted® - All Rights Reserved.</div>
+                    <div class="footer-separator">
+                        <div class="icon"></div>
+                    </div>
+                    <div class="footer-logo"><a title="MostWanted® - GTA V Roleplay Server - FiveM"><img src="images/lorentzos.png" alt="MostWanted® - GTA V Roleplay Server - FiveM" title="MostWanted® - GTA V Roleplay Server - FiveM" style="height: auto; width: 166px;"></a></div>
+                </div>
+
             </div>
-         </div>
-      </footer>
-   </body>
+        </div>
+    </section>
+	
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/scrollbar.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/isotope.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/wow.js"></script><script src="js/element-in-view.js"></script>
+<script src="js/script.js"></script>
+
+</body>
 </html>

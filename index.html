@@ -1,715 +1,516 @@
 <!DOCTYPE html>
-<html lang="el">
-   <head prefix="og: https://ogp.me/ns#">
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="referrer" content="always">
-      <meta name="document-state" content="Dynamic">
-      <link rel="stylesheet" href="css/styles.css">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="x-dns-prefetch-control" content="on">
-      <link rel="manifest" href="manifest.json">
-      <title>MostWanted® Roleplay</title>
-      <link rel="icon" href="img/logo.webp" type="image/x-icon">
-      <meta name="description" content="MostWanted® Roleplay | FiveM Server">
-      <meta name="keywords" content="mw, mostwanted, most wanted roleplay, most wanted rp">
-      <meta name="author" content="Lorentzos">
-      <meta property="og:title" content="MostWanted® Roleplay">
-      <meta property="og:description" content="MostWanted® Roleplay | FiveM Server">
-      <meta property="og:image" content="img/logo.webp">
-      <meta property="og:url" content="">
-      <meta property="og:type" content="website">
-      <link rel="icon" href="img/logo.webp" type="image/webp">
-      <link rel="shortcut icon" href="img/logo.webp" type="image/webp">
-      <link rel="preload" href="img/logo.webp" as="image">
-      <link rel="preload" href="img/mwlogoheader.webp" as="image">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-      <script type="application/ld+json">
-         {
-             "@context": "https://schema.org",
-             "@type": "LocalBusiness",
-             "name": "MostWanted® Roleplay",
-             "image": "img/logo.webp",
-             "url": "",
-             "telephone": "",
-             "address": {
-                 "@type": "PostalAddress",
-                 "streetAddress": "",
-                 "addressLocality": "",
-                 "addressRegion": "",
-                 "postalCode": "",
-                 "addressCountry": "GR"
-             },
-             "geo": {
-                 "@type": "GeoCoordinates",
-                 "latitude": "",
-                 "longitude": ""
-             },
-             "sameAs": [
-                 ""
-             ]
-         }
-      </script>
-      <style>
-         body {
-         font-family: Arial, sans-serif;
-         line-height: 1.6;
-         background-color: #1a1a1a;
-         color: #ccc;
-         margin: 0;
-         padding: 0;
-         }
-         .rules-container {
-         max-width: 800px;
-         margin: auto;
-         padding: 20px;
-         border-radius: 5px;
-         margin-top: 20px;
-         }
-         h1 {
-         color: #dc3545;
-         text-align: center;
-         margin-bottom: 20px;
-         }
-         .category {
-         margin-top: 30px;
-         }
-         .category h2 {
-         color: #dc3545;
-         font-size: 24px;
-         border-bottom: 2px solid #dc3545;
-         padding-bottom: 5px;
-         margin-bottom: 15px;
-         }
-         .rule-item {
-         padding: 10px;
-         background-color: #1a1a1a;
-         border-left: 4px solid #dc3545;
-         color: white;
-         border-radius: 3px;
-         margin-bottom: 15px;
-         }
-         .rule-item h3 {
-         margin-top: 0;
-         font-size: 18px;
-         color: rgb(250, 0, 0);
-         }
-         .rule-item p {
-         margin-bottom: 0;
-         color: white;
-         font-size: 10px;
-         }
-
-         .sticky-section {
-            position: -webkit-sticky; /* For Safari */
-            position: sticky;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            z-index: 1000;
-        }
-        .nav {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .nav-item {
-            font-size: 1.5em;
-        }
-        .nav-link {
-            text-decoration: none;
-            color: #000;
-        }
-        .nav-link:hover {
-            color: #007bff; /* Change color on hover */
-        }
-
-        
-      </style>
-   </head>
-   <body>
-      <header>
-         <div class="header-container">
-            <picture class="logo">
-               <img src="img/mwlogoheader.webp" alt="logo" draggable="false" loading="lazy">
-            </picture>
-            </a>
-            <input type="checkbox" id="click">
-            <label for="click" class="menu-btn">
-            <span></span>
-            </label>
-            <nav class="main-nav">
-               <ul>
-                  <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> <span class="icon-text">Αρχική</span></a></li>
-<!--                   <li class="nav-item"><a id="puipLink" class="nav-link" href="fivem://connect/ip"><i class="fas fa-play"></i> <span class="icon-text">Παίξε τώρα</span></a></li> -->
-                  <li class="nav-item"><a class="nav-link" href="rules.html"><i class="fas fa-book"></i> <span class="icon-text">Κανόνες</span></a></li>
-                  <li class="nav-item donate-button"><a class="nav-link" href="donates.html"><i class="fas fa-donate"></i> <span class="icon-text">Donates</span></a></li>
-               </ul>
-            </nav>
-         </div>
-      </header>
-      <div class="social-section">
-        <ul class="social-nav">
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://www.instagram.com/mostwanted_roleplay">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://www.tiktok.com/@mostwanted__roleplay">
-                    <i class="fab fa-tiktok"></i>
-                </a>
-            </li>
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://www.youtube.com/@MostWantedOfficial333/featured">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </li>
-            <li class="social-nav-item">
-                <a class="social-nav-link" href="https://discord.gg/mostwantedroleplay">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-      <section class="home" id="home">
-         <div class="wrap">  
-         <div class="slide-container active">
-          <picture>
-            <img src="img/logo2.webp" class="home-logo" alt="logo" draggable="false" loading="lazy" style="height: 440px;">
-            <div class="sparks">
-              <div class="spark spark_1"></div>
-              <div class="spark spark_2"></div>
-              <div class="spark spark_3"></div>
-              <div class="spark spark-big"></div>
-          </div>
-        </picture>        
-         </div>
-         </div>
-
-    
-
-         <div class="discord-btn-container">
-          <button class="play-btn" id="playNowBtn">ΠΑΙΞΕ ΤΩΡΑ</button>
-          <button class="play-btn" id="unlockIpBtn">UNLOCK IP</button>
-         </div>
-         <div class="discord-container">
-            <div class="flex slideNewsBlock">
-               <div class="sliderBlock">
-                  <div class="swiper-container swiper-slider">
-                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                           <iframe src="https://discord.com/widget?id=1111238187407392829&theme=dark" width="580" height="560" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MostWanted® - GTA V Roleplay Server</title>
+    <meta name="description" content="MostWanted® - GTA V Roleplay Server">
+    <meta name="keywords" content="MostWanted® , gta v, grand theft auto, gta">
+    <meta property="og:title" content="MostWanted® - GTA V Roleplay Server" />
+    <meta property="og:image" content="images/logo.webp">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
+    <link rel="icon" href="images/logo.webp" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+<body class="dark-layout">
+    <div class="page-wrapper" style="image-rendering: pixelated;">
+        <div class="preloader">
+            <div class="icon"></div>
+        </div>
+        <header class="main-header header-style-two">
+            <div class="header-container">
+                <div class="header-top">
+                    <div class="auto-container">
+                        <div class="inner clearfix">
+                            <div class="top-left">
+                                <ul class="info clearfix">
+                                    <li>MostWanted® Roleplay | <b style="color:#ff0000;text-shadow:0 0 12px">Online</b> [300/300]</li>
+                                  
+                                </ul>
+                            </div>
+                            <div class="top-right">
+                                <div class="social-links">
+                                    <ul class="clearfix">
+                                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-discord"></span></a></li>
+                                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-tiktok"></span></a></li>
+                                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-youtube"></span></a></li>
+                                        <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-twitter"></span></a></li>
+                                        <li><a href="https://www.instagram.com/MostWanted®roleplayofficial/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="newsBlock">
-                  <div class="flex-s newsTitle">
-                     <h2>Most Wanted Roleplay</h2>
-                  </div>
-                  <div class="news-content">
-                     <p>Αγαπητό Community, καλώς ορίσατε στον Most Wanted,</p>
-                     <p>Αν θέλετε να μπείτε χωρίς κανένα πρόβλημα, διαβάστε προσεκτικά τους κανόνες της νέας πόλης.</p>
-                     <br>
-                     <p><span class="highlight-text">Σας υποσχόμαστε κάτι μοναδικό και πρωτότυπο σε σχέση με τα ελληνικά δεδομένα.</span></p>
-                     <br>
-                     <p>Καλό gaming σε όλους!</p>
-                  </div>
-               </div>
+                    </div>
+                </div>
+                <div class="header-lower">
+                    <div class="auto-container">
+                        <div class="lower-inner clearfix">
+                            <div class="logo-box">
+                                <div class="logo"><a title="MostWanted® - GTA V Roleplay Server - FiveM"><img src="images/logo.webp" alt="MostWanted® - GTA V Roleplay Server - FiveM" title="MostWanted® - GTA V Roleplay Server - FiveM" ></a></div>
+                            </div>
+                            <div class="nav-outer clearfix">
+                                <div class="mobile-nav-toggler"><span style="color:#ec2121" class="fas fa-bars"></span></div>
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                        <ul class="navigation clearfix">
+                                            <li class="current"><a href="index.html">ΑΡΧΙΚΗ</a></li>
+                                            <li><a href="rules.html">ΚΑΝΟΝΕΣ</a></li>
+                                            <li><a href="applications.html">APPLICATIONS</a></li>
+                                        </ul>
+                                        <ul class="navigation clearfix">
+                                            <li><a href="" style="color:#ff2f18;text-shadow:0 0 20px #ff2f18;">ΠΑΙΞΕ ΤΩΡΑ</a></li>
+                                            <li><a href="https://discord.com/invite/mostwantedroleplay" target="_blank" style="color:#5a75fe;text-shadow:0 0 20px #5a75fe;">DISCORD</a></li>
+                                            <li><a href="donates.html" style="color:#f8c613;text-shadow:0 0 20px #f8c613;">DONATES</a></li>
+                                        </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <div class="logo pull-left">
+                        <a title=""><img src="images/logo.webp" alt="" title=""></a>
+                    </div>
+                    <div class="pull-right">
+                        <nav class="main-menu clearfix">
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <div class="close-btn"><span style="color:#ec2121" class="fas fa-times"></span></span></div>
+                <nav class="menu-box">
+                    <div class="nav-logo"><a><img src="images/logo.webp" alt="" title=""></a></div>
+                    <div class="menu-outer">
+                    </div>
+                    <div class="social-links">
+                        <ul class="clearfix">
+                            <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-discord"></span></a></li>
+                            <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-tiktok"></span></a></li>
+                            <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-youtube"></span></a></li>
+                            <li><a href="https://discord.gg/MostWanted®" target="_blank"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="https://www.instagram.com/MostWanted®roleplayofficial/" target="_blank"><span class="fab fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <section  style="height:180px">
+                <div class="image-layer first-layer" style="background-image:url(images/background.jpg)"></div>
+                <div class="image-layer2 second-layer" style="background-image:url(images/footer-bg.jpg)"></div>
+        </section>
 
-<style>
+        <section class="about-section-two" style="margin-top:-70px;">
+            <div class="auto-container">
+                <div class="platforms" style="margin-bottom:-20px;">
+                    <div class="row clearfix">
+                        <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><span style="color:#f92d2d" class="fas fa-heartbeat"></span></div>
+                                <div class="inner">
+                                        <span class="upper-span">ΕΝΕΡΓΑ STAFF</span>
+                                        <span class="lower-span">24 / 7 ONLINE</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="900ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><span style="color:#f92d2d" class="fas fa-user"></span></div>
+                                <div class="inner">
+                                        <span class="upper-span">ΜΟΝΑΔΙΚΑ</span>
+                                        <span class="lower-span">ΕΠΑΓΓΕΛΜΑΤΑ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="600ms">
+                            <div class="inner-box">
+                                <div class="icon-box"><span style="color:#f92d2d" class="fas fa-network-wired"></span></div>
+                                <div class="inner">
+                                        <span class="upper-span">ΙΣΧΥΡΗ DDOS</span>
+                                        <span class="lower-span">ΠΡΟΣΤΑΣΙΑ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-.team-section {
-  padding: 50px 20px;
-}
 
-.team-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
+                <div class="mid-row">
+                    <div class="auto-container">
+                        <div class="row clearfix">
+                        <div class="text-col col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="2000ms" data-wow-delay="0ms">
+                                <div class="inner">
+                                    <div class="sec-title" style="margin-top:-65px;">
+                                        <div class="upper-text">ROLEPLAY SERVER - GTA V</div>
+                                        <h2>MostWanted® </h2>
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                          <b> <b style="color:#ff4040"> Αγαπητό Community</b>, καλώς ορίσατε στον Most Wanted,
+                                            
+                                            Αν θέλετε να μπείτε χωρίς κανένα πρόβλημα, διαβάστε προσεκτικά τους κανόνες της νέας πόλης.
+                                            
+                                            
+                                            Σας υποσχόμαστε κάτι μοναδικό και πρωτότυπο σε σχέση με τα ελληνικά δεδομένα.
+                                            
+                                            
+                                            Καλό gaming σε όλους!
+                                        </b>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-col col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="2000ms" data-wow-delay="0ms">
+                                <div class="inner">
+                                    <div class="images clearfix">
+                                        <center><a href="" target="_blank" style="width:100%;background:#c52100;border-radius:5px;" class="theme-btn btn-style-one"><span class="btn-title"><i class="fas fa-play"></i> ΠΑΙΞΕ ΤΩΡΑ</span></a></center>
+                                        <iframe src="https://discord.com/widget?id=1111238187407392829&theme=dark" width="535" height="440" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-.team-h2 {
-  font-size: 36px;
-  font-weight: bold;
-  color: #ffffff; /* Red color */
-  margin-bottom: 50px;
-}
+            </div>
+        </section>
 
-.team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
 
-.team-member {
-    background: rgba(30, 30, 30, 0.382);
-    backdrop-filter: blur(10px);
-  border-radius: 10px;
-  padding: 20px;
-  width: 200px;
-  height: 220px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
 
-.team-member:hover {
-  transform: translateY(-10px);
-}
 
-.team-member img {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.team-h3 {
-  font-size: 24px;
-
-}
-
-.team-p {
-  font-size: 14px;
-  color: #a0aec0; /* Light gray text */
-  margin-bottom: 20px;
-}
-
-.team-social-links a {
-  text-decoration: none;
-  color: #f56565; /* Red color */
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.team-social-links a:hover {
-  color: #ffffff; /* Darker red on hover */
-}
-
-</style>
-
-<section class="team-section">
-    <div class="team-container container">
-      <h2 class="team-h2">Our Team</h2>
-  
-      <div class="team-grid">
-        <div class="team-member">
-          <img src="img/logo.webp" alt="Team Member 1">
-          <h3 class="team-h3">Bandolero</h3>
-          <p class="team-p">CEO</p>
-        </div>
-  
-        <div class="team-member">
-          <img src="img/logo.webp" alt="Team Member 2">
-          <h3 class="team-h3">UnderWorld</h3>
-          <p class="team-p">CEO</p>
-        </div>
-  
-        <div class="team-member">
-          <img src="img/developers_icons/lo.webp" alt="Team Member 3">
-          <h3 class="team-h3">Lorentzos</h3>
-          <p class="team-p">Developer</p>
-        </div>
-
-        <div class="team-member">
-            <img src="img/developers_icons/get.webp" alt="Team Member 3">
-            <h3 class="team-h3">GetAhead</h3>
-            <p class="team-p">Developer</p>
-          </div>
+        <section class="team-section">
+            <div class="team-container container">
+              <h2 class="team-h2"><b>OUR TEAM</b></h2>
+          
+              <div class="team-grid">
+                <div class="team-member">
+                  <img src="images/logo.webp" alt="Team Member 1">
+                  <h3 class="team-h3">Bandolero</h3>
+                  <p class="team-p">CEO</p>
+                </div>
+          
+                <div class="team-member">
+                  <img src="images/logo.webp" alt="Team Member 2">
+                  <h3 class="team-h3">UnderWorld</h3>
+                  <p class="team-p">CEO</p>
+                </div>
+          
+                <div class="team-member">
+                  <img src="images/developers_icons/lo.webp" alt="Team Member 3">
+                  <h3 class="team-h3">Lorentzos</h3>
+                  <p class="team-p">Developer</p>
+                </div>
         
+                <div class="team-member">
+                    <img src="images/developers_icons/get.webp" alt="Team Member 3">
+                    <h3 class="team-h3">GetAhead</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+                
+        
+                  <div class="team-member">
+                    <img src="images/developers_icons/sln.webp" alt="Team Member 3">
+                    <h3 class="team-h3">Silence</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+        
+                  <div class="team-member">
+                    <img src="images/developers_icons/bro.webp" alt="Team Member 3">
+                    <h3 class="team-h3">𝕻𝖗𝖔𝕺𝖋𝕿𝖍𝖊𝕿𝖎𝖒𝖊</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+        
+                  <div class="team-member">
+                    <img src="images/developers_icons/nea.webp" alt="Team Member 3">
+                    <h3 class="team-h3">Neaxfus</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+        
+                  <div class="team-member">
+                    <img src="images/logo.webp" alt="Team Member 3">
+                    <h3 class="team-h3">Life Owner</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+        
+                  <div class="team-member">
+                    <img src="images/logo.webp" alt="Team Member 3">
+                    <h3 class="team-h3">ZaYn</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+        
+                  <div class="team-member">
+                    <img src="images/developers_icons/whi.gif" alt="Team Member 3">
+                    <h3 class="team-h3">Whiskakii</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+        
+                  <div class="team-member">
+                    <img src="images/developers_icons/tas.webp" alt="Team Member 3">
+                    <h3 class="team-h3">Tasos27</h3>
+                    <p class="team-p">Developer</p>
+                  </div>
+          
+              </div>
+            </div>
+          </section>
 
-          <div class="team-member">
-            <img src="img/developers_icons/sln.webp" alt="Team Member 3">
-            <h3 class="team-h3">Silence</h3>
-            <p class="team-p">Developer</p>
-          </div>
-
-          <div class="team-member">
-            <img src="img/developers_icons/bro.webp" alt="Team Member 3">
-            <h3 class="team-h3">𝕻𝖗𝖔𝕺𝖋𝕿𝖍𝖊𝕿𝖎𝖒𝖊</h3>
-            <p class="team-p">Developer</p>
-          </div>
-
-          <div class="team-member">
-            <img src="img/developers_icons/nea.webp" alt="Team Member 3">
-            <h3 class="team-h3">Neaxfus</h3>
-            <p class="team-p">Developer</p>
-          </div>
-
-          <div class="team-member">
-            <img src="img/logo.webp" alt="Team Member 3">
-            <h3 class="team-h3">Life Owner</h3>
-            <p class="team-p">Developer</p>
-          </div>
-
-          <div class="team-member">
-            <img src="img/logo.webp" alt="Team Member 3">
-            <h3 class="team-h3">ZaYn</h3>
-            <p class="team-p">Developer</p>
-          </div>
-
-          <div class="team-member">
-            <img src="img/developers_icons/whi.gif" alt="Team Member 3">
-            <h3 class="team-h3">Whiskakii</h3>
-            <p class="team-p">Developer</p>
-          </div>
-
-          <div class="team-member">
-            <img src="img/developers_icons/tas.webp" alt="Team Member 3">
-            <h3 class="team-h3">Tasos27</h3>
-            <p class="team-p">Developer</p>
-          </div>
-        <!-- Add more team members as needed -->
-  
-      </div><!-- .team-grid -->
-  
-    </div><!-- .team-container -->
-  </section><!-- .team-section -->
-      
-
-  <div class="flex str-m">
-    <div class="streamBlock">
-      <h2 style="text-align: center;">MW Streamers</h2>
-      <div class="str-block">
-        <a href="./streamers" class="diyu"><img src="img/Diyu.png" alt=""></a>
-        <a href="./streamers" class="bando"><img src="img/bando.png" alt=""></a>
-      </div>
-
-    </div>
-  </div><!--str-m-->
-  
-  
-<style>
-.str-m {
-  position: relative;
-  margin: 0 auto 100px auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  max-width: 1200px;
-}
-
-
-.str-m:after {
-  content: "";
-  background: url(../images/hero.png) no-repeat;
-  width: 714px;
-  height: 919px;
-  position: absolute;
-  top: -50px;
-  left: -34px;
-}
-
-.str-m > div {
-  width: 100%;
-}
-
-.str-m h2 {
-  font-size: 42px;
-  margin-bottom: 35px;
-}
-
-.streamBlock {
-  position: relative;
-  z-index: 2;
-}
-
-.streamBlock .str-block {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-}
-
-
-.streamBlock a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(50% - 10px);
-  height: 150px;
-  padding: 10px;
-  width: 460px;
-  position: relative;
-  margin-bottom: 30px;
-  border-radius: 15px; /* Increased border radius for a modern look */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Ensures content doesn't overflow */
-}
-
-.streamBlock a img {
-  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5));
-}
-
-.streamBlock a:hover {
-  transform: scale(0.90);
-}
-
-.streamBlock a:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.streamBlock a.twitch {
-  background-color: #562e8e;
-}
-
-.streamBlock a.twitch:after {
-  background: url(../images/twich-hero.png) no-repeat;
-  width: 145px;
-  height: 142px;
-  right: 3px;
-}
-
-.streamBlock a.youtube {
-  background-color: #6e0f0f;
-}
-
-.streamBlock a.youtube:after {
-  background: url(img/yt-hero.png) no-repeat;
-  width: 147px;
-  height: 143px;
-}
-
-.streamBlock a.diyu {
-  background-color: #6e0f0f;
-}
-
-.diyu {
-  position: relative;
-  width: 300px;
-  height: 80px;
-  overflow: hidden;
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border:  1px rgb(231, 45, 45) solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: background-color 0.3s ease;
-background-color: rgb(78, 21, 7);
-border-radius: 5px;
-  background-size: cover;
-  background-image: url('img/red-bg.jpg');
-}
-
-.diyu::before {
-  content: "";
-  position: absolute;
-  width: 100%; /* Full width initially */
-  height: 100%;
-  background-image: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 30%,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0) 70%
-  );
-  top: 0;
-  left: -100%; /* Start off-screen */
-  opacity: 0.6;
-  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth cubic-bezier transition */
-}
-
-.diyu:hover::before {
-  left: 100%; /* Move to full width */
-}
-
-.diyu span {
-  position: relative;
-  z-index: 1;
-}
-
-.diyu:hover {
-  background-color: rgb(120, 28, 5);
-  background-image: url('img/red-bg-bl.png');
-  
-}
-
-/* bando */
-
-
-.bando {
-  position: relative;
-  width: 300px;
-  height: 80px;
-  overflow: hidden;
-  color: white;
-  font-size: 18px;
-  text-transform: uppercase;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border:  1px rgb(231, 45, 45) solid;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: background-color 0.3s ease;
-background-color: rgb(78, 21, 7);
-border-radius: 5px;
-  background-size: cover;
-  background-image: url('img/red-bg.jpg');
-}
-
-.bando::before {
-  content: "";
-  position: absolute;
-  width: 100%; /* Full width initially */
-  height: 100%;
-  background-image: linear-gradient(
-      120deg,
-      rgba(255, 255, 255, 0) 30%,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0) 70%
-  );
-  top: 0;
-  left: -100%; /* Start off-screen */
-  opacity: 0.6;
-  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth cubic-bezier transition */
-}
-
-.bando:hover::before {
-  left: 100%; /* Move to full width */
-}
-
-.bando span {
-  position: relative;
-  z-index: 1;
-}
-
-.bando:hover {
-  background-color: rgb(120, 28, 5);
-  background-image: url('img/red-bg-bl.png');
-  
-}
-
-.streamBlock a.diyu:after {
-  background: url(img/hero2.png) no-repeat;
-  width: 147px;
-  height: 143px;
-}
-
-.streamBlock a.bando {
-  background-color: #6e0f0f;
-}
-
-.streamBlock a.bando:after {
-  background: url(img/hero1.png) no-repeat;
-  width: 147px;
-  height: 143px;
-}
-@media (max-width: 1200px) {
-  .str-m {
-    max-width: 100%;
+          <style>
+             .team-section {
+    padding: 50px 20px;
   }
-}
-
-@media (max-width: 992px) {
-  .streamBlock a {
-    width: calc(50% - 10px);
-    height: 130px;
+  
+  .team-container {
+    max-width: 1520px;
+    margin: 0 auto;
+    text-align: center;
   }
-
-  .str-m h2 {
+  
+  .team-h2 {
     font-size: 36px;
+    font-weight: bold;
+    color: #ffffff; /* Red color */
+    margin-bottom: 50px;
   }
-
   
-}
-
-@media (max-width: 768px) {
-  .streamBlock a {
-    width: 100%;
-    height: 120px;
+  .team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
   }
+  
+  .team-member {
+    background: rgba(61, 23, 23, 0.382);
+    backdrop-filter: blur(10px);
 
-  .str-m h2 {
-    font-size: 32px;
+  border: 2px solid #1f1f1f; /* Red border */
+      backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    height: 220px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
   }
-}
-
-@media (max-width: 576px) {
-  .streamBlock a {
+  
+  .team-member:hover {
+    transform: translateY(-10px);
+  }
+  
+  .team-member img {
+    border-radius: 50%;
+    width: 100px;
     height: 100px;
+    object-fit: cover;
     margin-bottom: 20px;
   }
-
-  .str-m h2 {
-    font-size: 28px;
+  
+  .team-h3 {
+    font-size: 24px;
+  
   }
-
-  .str-m:after {
-    width: 357px;
-    height: 459px;
-    top: -25px;
-    left: -17px;
+  
+  .team-p {
+    font-size: 14px;
+    color: #a0aec0; /* Light gray text */
+    margin-bottom: 20px;
   }
-}
-</style>
+  
+  .team-social-links a {
+    text-decoration: none;
+    color: #f56565; /* Red color */
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .team-social-links a:hover {
+    color: #ffffff; /* Darker red on hover */
+  }
+          </style>
 
-<!-- Modal Structure for playh or unlockip -->
-<div id="puipModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 style="font-size: 41px;">ALERT</h2>
-    <h2 style="font-size: 25px;">THE SERVER IS UNDER DEVELOPMENT!</h2>
-  </div>
-</div>
 
-<!-- Modal Structure for Bando -->
-<div id="bandoModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 style="font-size: 25px;">Follow Bandolero On</h2>
-    <div class="social-icons">
-      <a href="https://www.youtube.com" target="_blank"><img src="img/youtube.webp" alt="YouTube"></a>
-      <a href="https://www.instagram.com" target="_blank"><img src="img/instagram.webp" alt="Instagram"></a>
-      <a href="https://www.tiktok.com" target="_blank"><img src="img/tiktok.webp" alt="TikTok"></a>
-    </div>
-  </div>
-</div>
+          <div class="flex str-m">
+            <div class="streamBlock">
+              <h2 style="text-align: center;"><b>STREAMERS</b></h2>
+              <div class="str-block">
+                <a  class="streamers-button diyu"><b style="color: white;">DIYU</b></a>
+                <a  class="streamers-button bando"><b style="color: white;">BANDOLERO</b></a>
+              </div>
+        
+            </div>
+          </div>
+          
+          
+        <style>
+        .str-m {
+          position: relative;
+          margin: 0 auto 100px auto;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: center;
+          max-width: 1200px;
+        }
+        
 
-<!-- Modal Structure for Diyu -->
-<div id="diyuModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 style="font-size: 25px;">Follow Diyu On</h2>
-    <div class="social-icons">
-      <a href="https://www.youtube.com/channel/UCcUV2t08cXluEpf_g4KuLug" target="_blank"><img src="img/youtube.webp" alt="YouTube"></a>
-      <a href="https://www.instagram.com/diyu_raw/" target="_blank"><img src="img/instagram.webp" alt="Instagram"></a>
-      <a href="https://www.tiktok.com/@imdiyu" target="_blank"><img src="img/tiktok.webp" alt="TikTok"></a>
-    </div>
-  </div>
-</div>
+        
+        .str-m > div {
+          width: 100%;
+        }
+        
+        .str-m h2 {
+          font-size: 42px;
+          margin-bottom: 35px;
+        }
+        
+        .streamBlock {
+          position: relative;
+          z-index: 2;
+        }
+        
+        .streamBlock .str-block {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 20px;
+        }
+        
+        
+        .streamBlock a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: calc(50% - 10px);
+          height: 150px;
+          padding: 10px;
+          width: 460px;
+          position: relative;
+          margin-bottom: 30px;
+          border-radius: 15px; /* Increased border radius for a modern look */
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          overflow: hidden; /* Ensures content doesn't overflow */
+        }
+        
+        .streamBlock a img {
+          filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5));
+        }
+        
+        .streamBlock a:hover {
+          transform: scale(0.90);
+        }
+        
+        .streamBlock a:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+        
+    
 
-<style>
-  /* Modal Styles */
+        
+
+
+        .streamBlock a.streamers-button {
+            background: rgba(234, 40, 40, 0.188);
+            backdrop-filter: blur(10px);
+        }
+        
+        .streamers-button {
+          position: relative;
+          width: 300px;
+          height: 80px;
+          overflow: hidden;
+          color: white;
+          font-size: 18px;
+          text-transform: uppercase;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border:  1px rgb(231, 45, 45) solid;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+          transition: background-color 0.3s ease;
+          background: rgba(61, 23, 23, 0.382);
+          backdrop-filter: blur(10px);
+        border-radius: 5px;
+          background-size: cover;
+        }
+        
+        .streamers-button::before {
+          content: "";
+          position: absolute;
+          width: 100%; /* Full width initially */
+          height: 100%;
+          background-image: linear-gradient(
+              120deg,
+              rgba(255, 255, 255, 0) 30%,
+              rgba(255, 255, 255, 0.8),
+              rgba(255, 255, 255, 0) 70%
+          );
+          top: 0;
+          left: -100%; /* Start off-screen */
+          opacity: 0.6;
+          transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth cubic-bezier transition */
+        }
+        
+        .streamers-button:hover::before {
+          left: 100%; /* Move to full width */
+        }
+        
+        .streamers-button span {
+          position: relative;
+          z-index: 1;
+        }
+        
+        .streamers-button:hover {
+          background-color: rgb(120, 28, 5);
+          
+        }
+        
+  
+        </style>
+        
+
+        <div id="bandoModal" class="modal">
+          <div class="modal-content">
+            <h2 style="font-size: 25px;"><b>Follow Bandolero On</b> <span class="close">&times;</span></h2>
+            <div class="social-buttons">
+               <a href="" target="_blank" style="width:30%; height: 20%; background:#c52100;border-radius:5px;" class="theme-btn btn-style-one"><span class="btn-title"></i>YOUTUBE</span></a>
+               <br>
+               <a href="" target="_blank" style="width:30%;height: 20%; background:#c52100;border-radius:5px;" class="theme-btn btn-style-one"><span class="btn-title"></i>TIK TOK</span></a>
+               <a href="" target="_blank" style="width:30%;height: 20%; background:#c52100;border-radius:5px;" class="theme-btn btn-style-one"><span class="btn-title"></i>INSTAGRAM</span></a>
+            </div>
+          </div>
+        </div>
+        
+        <div id="diyuModal" class="modal">
+          <div class="modal-content">
+            <h2 style="font-size: 25px;"><b>Follow Diyu On</b> <span class="close">&times;</span></h2>
+            <div class="social-buttons">
+                <a href="" target="_blank" style="width:30%; height: 20%; background:#c52100;border-radius:5px;" class="theme-btn btn-style-one"><span class="btn-title"></i>YOUTUBE</span></a>
+                <br>
+                <a href="" target="_blank" style="width:30%;height: 20%; background:#c52100;border-radius:5px;" class="theme-btn btn-style-one"><span class="btn-title"></i>TIK TOK</span></a>
+                <a href="" target="_blank" style="width:30%;height: 20%; background:#c52100;border-radius:5px;" class="theme-btn btn-style-one"><span class="btn-title"></i>INSTAGRAM</span></a>
+            </div>
+          </div>
+        </div>
+        
+        <style>
+       /* Modal Styles */
 .modal {
   display: none;
   position: fixed;
@@ -723,15 +524,17 @@ border-radius: 5px;
 }
 
 .modal-content {
-  background-color: #1a1a1a; /* Dark background color */
+    background: rgba(61, 23, 23, 0.382);
+    backdrop-filter: blur(10px);
   margin: 10% auto; /* Adjusted margin for centering */
   padding: 30px;
-  border: 2px solid #ff4d4d; /* Red border */
+  border: 2px solid #6e0d0d; /* Red border */
   width: 80%;
   max-width: 600px;
   text-align: center;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  color: #fff; /* White text color */
 }
 
 .modal-content h2 {
@@ -752,7 +555,7 @@ border-radius: 5px;
   text-decoration: none;
 }
 
-.social-icons {
+.social-buttons {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap */
   justify-content: center;
@@ -760,7 +563,7 @@ border-radius: 5px;
   margin-top: 30px; /* Top margin */
 }
 
-.social-icons a {
+.social-buttons a {
   width: 100px; /* Width of each icon container */
   height: 100px; /* Height of each icon container */
   display: flex;
@@ -772,7 +575,7 @@ border-radius: 5px;
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.social-icons a img {
+.social-buttons a img {
   width: 60px; /* Ensure consistent width for the image */
   height: 60px; /* Ensure consistent height for the image */
   max-width: 100%; /* Ensure images scale within container */
@@ -780,7 +583,7 @@ border-radius: 5px;
   object-fit: cover; /* Maintain aspect ratio and cover entire space */
 }
 
-.social-icons a::before {
+.social-buttons a::before {
   content: '';
   position: absolute;
   top: 0;
@@ -791,248 +594,214 @@ border-radius: 5px;
   transition: background-color 0.3s ease; /* Smooth transition */
 }
 
-.social-icons a:hover::before {
+.social-buttons a:hover::before {
   background-color: rgba(255, 77, 77, 0.5); /* Semi-transparent red overlay on hover */
   border-radius: 15px;
 }
 
-.social-icons a:hover {
+.social-buttons a:hover {
   transform: scale(1.1); /* Scale up the icon container on hover */
 }
 
+        
+        
+        
+        </style>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var bandoModal = document.getElementById("bandoModal");
+            var diyModal = document.getElementById("diyuModal");
+            var bandoBtn = document.querySelector(".bando");
+            var diyBtn = document.querySelector(".diyu");
+            var spans = document.querySelectorAll(".modal .close");
+        
+            bandoBtn.onclick = function(event) {
+              event.preventDefault();
+              bandoModal.style.display = "block";
+            }
+        
+            diyBtn.onclick = function(event) {
+              event.preventDefault();
+              diyModal.style.display = "block";
+            }
+        
+            spans.forEach(function(span) {
+              span.onclick = function() {
+                bandoModal.style.display = "none";
+                diyModal.style.display = "none";
+              }
+            });
+        
+            window.onclick = function(event) {
+              if (event.target == bandoModal || event.target == diyModal) {
+                bandoModal.style.display = "none";
+                diyModal.style.display = "none";
+              }
+            }
+          });
+        </script>
+        
+        
+        
+        <div class="video-section">
+            <div class="video">
+              <video controls preload="metadata" width="100%" height="200">
+                <source src="https://mostwantedrp.gr/videos/video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+                <p>MostWanted© Roleplay - Custom Hud Presentation</p>
+            </div>
+            <div class="video">
+              <video controls preload="metadata" width="100%" height="200">
+                <source src="https://mostwantedrp.gr/videos/video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+                <p>MostWanted© Roleplay - Golf Presentation</p>
+            </div>
+            <div class="video">
+              <video controls preload="metadata" width="100%" height="200">
+                <source src="https://mostwantedrp.gr/videos/video3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+                <p>MostWanted© Roleplay - Parking  Presentation</p>
+            </div>
+        </div>
+        
+        <style>
+           .video-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            perspective:500px;
+        }
+        
+        .video {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px; /* Added to create space between rows */
+            border: 1px solid #222222;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .video:hover {
+            transform: translateY(-5px);
+        }
+        
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+        
+        .video p {
+            padding: 15px;
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #222222;
+        }
+        
+        </style>
 
 
-</style>
-<script>
+ 
+ 
 
-document.addEventListener('DOMContentLoaded', function () {
-    var puipModal = document.getElementById("puipModal");
-    var puipLink = document.getElementById("puipLink");
-    var playNowBtn = document.getElementById("playNowBtn");
-    var unlockIpBtn = document.getElementById("unlockIpBtn");
+    
+         
 
-    // Function to open puipModal
-    function openPuipModal() {
-      puipModal.style.display = "block";
-    }
-
-    // Add click event listener to puipLink
-    if (puipLink) {
-      puipLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default behavior of the link
-        openPuipModal();
-      });
-    }
-
-    // Add click event listener to playNowBtn
-    playNowBtn.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default behavior of the button
-      openPuipModal();
-    });
-
-    // Add click event listener to unlockIpBtn
-    unlockIpBtn.addEventListener('click', function(event) {
-      event.preventDefault(); // Prevent the default behavior of the button
-      openPuipModal();
-    });
-
-    // Close modal functionality
-    var closeButtons = document.querySelectorAll(".modal .close");
-
-    closeButtons.forEach(function(closeButton) {
-      closeButton.addEventListener('click', function() {
-        puipModal.style.display = "none";
-      });
-    });
-
-    // Close modal if clicked outside of it
-    window.addEventListener('click', function(event) {
-      if (event.target === puipModal) {
-        puipModal.style.display = "none";
-      }
-    });
-  });
-
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var bandoModal = document.getElementById("bandoModal");
-    var diyModal = document.getElementById("diyuModal");
-    var bandoBtn = document.querySelector(".bando");
-    var diyBtn = document.querySelector(".diyu");
-    var spans = document.querySelectorAll(".modal .close");
-
-    bandoBtn.onclick = function(event) {
-      event.preventDefault();
-      bandoModal.style.display = "block";
-    }
-
-    diyBtn.onclick = function(event) {
-      event.preventDefault();
-      diyModal.style.display = "block";
-    }
-
-    spans.forEach(function(span) {
-      span.onclick = function() {
-        bandoModal.style.display = "none";
-        diyModal.style.display = "none";
-      }
-    });
-
-    window.onclick = function(event) {
-      if (event.target == bandoModal || event.target == diyModal) {
-        bandoModal.style.display = "none";
-        diyModal.style.display = "none";
-      }
-    }
-  });
-</script>
-
-
-
-<div class="video-section">
-    <div class="video">
-      <video controls preload="metadata" width="100%" height="200">
-        <source src="https://mostwantedrp.gr/videos/video1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-        <p>MostWanted© Roleplay - Custom Hud Presentation</p>
-    </div>
-    <div class="video">
-      <video controls preload="metadata" width="100%" height="200">
-        <source src="https://mostwantedrp.gr/videos/video2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-        <p>MostWanted© Roleplay - Golf Presentation</p>
-    </div>
-    <div class="video">
-      <video controls preload="metadata" width="100%" height="200">
-        <source src="https://mostwantedrp.gr/videos/video3.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-        <p>MostWanted© Roleplay - Parking  Presentation</p>
-    </div>
-</div>
-
-<style>
-   .video-section {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    perspective:500px;
-}
-
-.video {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px; /* Added to create space between rows */
-    border: 1px solid #222222;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.video:hover {
-    transform: translateY(-5px);
-}
-
-.video iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-}
-
-.video p {
-    padding: 15px;
-    margin: 0;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #222222;
-}
-
-</style>
-
-      <div class="features-container">
-         <h2 class="section-title">Unique Features</h2>
-         <div class="flex">
-             <div class="features">
-                 <div class="features-image">
-                     <img src="img/f-1.jpg" alt="Feature 1 Image">
-                 </div>
-                 <div class="features-content">
-                     <h3 class="features-title" style="color: red;">Αυτοκίνητα </h3>
-                     <p class="features-description">Bρείτε καινούρια μοναδικά αυτοκίνητα για πρώτη φορα.</p>
-                     <div class="features-button">
-<!--                          <a href="#" class="button">ΠΕΡΙΣΣΟΤΕΡΑ</a> -->
-                     </div>
-                 </div>
-             </div>
-             <div class="features">
-                 <div class="features-image">
-                     <img src="img/f-2.jpg" alt="Feature 2 Image">
-                 </div>
-                 <div class="features-content">
-                     <h3 class="features-title" style="color: red;">Skins</h3>
-                     <p class="features-description">Μοναδικά όπλα και unique skins πού δεν θα δείτε σε κανέναν αλλο σέρβερ.</p>
-                     <div class="features-button">
-<!--                          <a href="#" class="button">ΠΕΡΙΣΣΟΤΕΡΑ</a> -->
-                     </div>
-                 </div>
-             </div>
-             <div class="features">
-                 <div class="features-image">
-                     <img src="img/f-3.jpg" alt="Feature 3 Image">
-                 </div>
-                 <div class="features-content">
-                     <h3 class="features-title" style="color: red;">Yψηλά fps</h3>
-                     <p class="features-description">Παίζετε με όσο το δυνατόν υψηλότερα fps.</p>
-                     <div class="features-button">
-<!--                          <a href="#" class="button">ΠΕΡΙΣΣΟΤΕΡΑ</a> -->
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </div>
-     
       
-      <footer class="footer">
-         <div class="container">
-            <div class="footer-content">
-               <div class="footer-column">
-                  <div class="widget">
-                     <h4>ΣΥΝΔΕΣΜΟΙ</h4>
-                     <ul>
-                      <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home"></i> <span class="icon-text">Αρχική</span></a></li>
-<!--                       <li class="nav-item"><a class="nav-link" href=""><i class="fas fa-play"></i> <span class="icon-text">Παίξε τώρα</span></a></li> -->
-                      <li class="nav-item"><a class="nav-link" href="rules.html"><i class="fas fa-book"></i> <span class="icon-text">Κανόνες</span></a></li>
-                      <li class="nav-item"><a class="nav-link" href="donates.html"><i class="fas fa-donate"></i> <span class="icon-text">Donates</span></a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="footer-column">
-                  <div class="about">
-                     <h3>Most Wanted Roleplay</h3>
-                     <p>Ο Most Wanted Roleplay φέρνει την ατμόσφαιρα του GTA RP στο FiveM με απίστευτες περιπέτειες και ατελείωτες δυνατότητες. Συνδεθείτε για να ζήσετε το δικό σας σενάριο, να συνάψετε συμμαχίες και να απολαύσετε το ρεαλιστικότερο GTA RP περιβάλλον στο FiveM.</p>
-                  </div>
-               </div>
-               <div class="footer-column">
-                  <div class="widget">
-                     <h4>Υποστήριξη</h4>
-                     <ul>
-                      <li class="nav-item"><a class="nav-link" href="https://discord.gg/mostwantedroleplay"><i class="fab fa-discord"></i> <span class="icon-text">Discord</span></a></li>
-                     </ul>
-                  </div>
-               </div>
+
+
+       <br><br>
+        <br/><br/>
+                <div class="game-awards">
+                    <div class="awards">
+                        <div class="row clearfix">
+                            <div class="award-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0ms">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <div class="upper-title">ΜΟΝΑΔΙΚΑ</div>
+                                            <div class="lower-title">ΑΥΤΟΚΙΝΗΤΑ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="award-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="300ms">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <div class="upper-title">OPTIMIZED</div>
+                                            <div class="lower-title">HIGH FPS</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="award-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="600ms">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <div class="upper-title">FIVE GUARD</span></div>
+                                            <div class="lower-title">ANTICHEAT</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="award-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="900ms">
+                                <div class="inner-box">
+                                    <div class="inner">
+                                        <div class="content">
+                                            <div class="upper-title">ΜΟΝΑΔΙΚΑ</div>
+                                            <div class="lower-title">ΟΠΛΑ</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-bottom text-center">
-               <hr />
-               <p>
-                  Πνευματικά δικαιώματα &copy;<script>document.write(new Date().getFullYear());</script> Όλα τα δικαιώματα διατηρούνται
-               </p>
+        </section>
+
+<section class="main-footer">
+            <div class="image-layer" style="background-image:url(images/background.jpg)"></div>
+            <div class="widgets-section">
+                <div class="auto-container">
+                    <div class="inner">
+                        <div class="copyright">Copyright &copy; 2024 MostWanted® - All Rights Reserved.</div>
+                        <div class="footer-separator">
+                            <div class="icon"></div>
+                        </div>
+                        <div class="footer-logo"><a title="MostWanted® - GTA V Roleplay Server - FiveM"><img src="images/lorentzos.png" alt="MostWanted® - GTA V Roleplay Server - FiveM" title="MostWanted® - GTA V Roleplay Server - FiveM" style="height: auto; width: 166px;"></a></div>
+                    </div>
+
+                </div>
             </div>
-         </div>
-      </footer>
-   </body>
+        </section>
+    </div>
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fas fa-arrow-up"></span></div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/scrollbar.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
 </html>
