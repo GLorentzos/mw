@@ -313,10 +313,20 @@
                </nav>
             </div>
          </header>
-         <section  style="height:180px">
-            <div class="image-layer first-layer" style="background-image:url(images/background.jpg)"></div>
-            <div class="image-layer2 second-layer" style="background-image:url(images/footer-bg.jpg)"></div>
-         </section>
+         <style>
+            .main-bg-site-section {
+                height: 180px;
+            }
+            @media (max-width: 968px) {
+                .main-bg-site-section {
+                    height: 10px;
+                }
+            }
+           </style>
+           <section class="main-bg-site-section">
+              <div class="image-layer first-layer" style="background-image:url(images/background.jpg)"></div>
+              <div class="image-layer2 second-layer" style="background-image:url(images/footer-bg.jpg)"></div>
+           </section>
          <section class="about-section-two" style="margin-top:-70px;">
             <div class="auto-container">
                <div class="platforms" style="margin-bottom:-20px;">
