@@ -4740,6 +4740,8 @@
      font-weight: 400;
      line-height: 22px;
      background: #151515;
+     border-radius: 25px;
+     border: 2px rgb(126, 25, 25) solid;
      padding: 30px 20px 30px 84px;
      transition: all 0.3s ease;
      -moz-transition: all 0.3s ease;
