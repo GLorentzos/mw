@@ -6,7 +6,7 @@ async function fetchPlayerData() {
         const playerCount = data.Data.players.length;
         const maxSlots = data.Data.sv_maxclients;
 
-        document.getElementById('playerCount').innerText = `${playerCount} / ${maxSlots}`;
+        document.getElementById('playerCount').innerText = `${playerCount}/${maxSlots}`;
     } catch (error) {
         console.error('Error fetching player data:', error);
         document.getElementById('playerCount').innerText = 'Could not fetch player data.';
