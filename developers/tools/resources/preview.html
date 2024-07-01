@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MostWanted® - Devs</title>
+    <style>
+
+        ::-webkit-scrollbar {
+            display: none; 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #1a1a1a; 
+            --secondary-bg: #262626; 
+            --text-color: #f0f0f0; 
+            --accent-color: #ff4e4e; 
+            --shadow-color: rgba(0, 0, 0, 0.2);
+            --hover-shadow-color: rgba(0, 0, 0, 0.4);
+            --input-bg: #383838; 
+            --border-radius: 8px; 
+        }
+
+        body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--primary-bg) url(images/background.jpg) no-repeat center center fixed;
+    background-size: cover; 
+    margin: 0;
+}
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 3.5rem; 
+            margin-bottom: 20px;
+        }
+
+        .resources-info {
+            color: #f9c519;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .search-bar {
+            position: relative;
+            margin-bottom: 40px; 
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: var(--border-radius); 
+            background-color: var(--input-bg);
+            color: var(--text-color);
+            font-size: 1.2rem;
+            box-shadow: 0 4px 20px var(--shadow-color);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+            outline: none;
+        }
+
+        .search-bar input[type="text"]:focus {
+            box-shadow: 0 4px 25px var(--hover-shadow-color);
+            background-color: #4a4a4a; 
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 30px; 
+            margin-top: 30px; 
+        }
+
+        .resource-item {
+            background-color: var(--secondary-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            position: relative;
+        }
+
+        .resource-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.226); 
+            border-radius: var(--border-radius);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .resource-item:hover::before {
+            opacity: 1; 
+        }
+
+        .resource-item:hover {
+            transform: translateY(-8px); 
+            box-shadow: 0 6px 25px var(--hover-shadow-color);
+        }
+
+        .resource-item a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            overflow: hidden;
+            color: rgb(255, 236, 28);
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 2.8rem;
+            }
+
+            .resources-info {
+                font-size: 1rem;
+            }
+
+            .search-bar input[type="text"] {
+                padding: 12px;
+            }
+
+            .resource-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Loading...</h1>
+        <div class="resources-info">Loading server information...</div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search resources...">
+        </div>
+        <div class="resource-grid" id="resource-grid">
+
+        </div>
+    </div>
+    <script>
+        const resourceGrid = document.getElementById('resource-grid');
+        const searchInput = document.getElementById('searchInput');
+        const titleElement = document.querySelector('title');
+        const h1Element = document.querySelector('h1');
+        const resourcesInfoElement = document.querySelector('.resources-info');
+
+        fetch('https://servers-frontend.fivem.net/api/servers/single/4ryxoo')
+            .then(response => response.json())
+            .then(data => {
+                const serverName = data.Data.hostname;
+                const resources = data.Data.resources;
+
+                titleElement.textContent = `${serverName} Resources`;
+                h1Element.textContent = serverName;
+                resourcesInfoElement.textContent = `${resources.length} resources`;
+
+                function displayResources(resources) {
+                    resourceGrid.innerHTML = '';
+                    resources.forEach(resource => {
+                        const resourceItem = document.createElement('div');
+                        resourceItem.className = 'resource-item';
+                        resourceItem.innerHTML = `<a href="#">${resource}</a>`;
+                        resourceGrid.appendChild(resourceItem);
+                    });
+                }
+
+                displayResources(resources);
+
+                searchInput.addEventListener('input', () => {
+                    const searchTerm = searchInput.value.toLowerCase();
+                    const filteredResources = resources.filter(resource => resource.toLowerCase().includes(searchTerm));
+                    displayResources(filteredResources);
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching the server resources:', error);
+                h1Element.textContent = 'Failed to load server';
+                resourcesInfoElement.textContent = 'Error fetching resources';
+            });
+    </script>
+</body>
+</html>
