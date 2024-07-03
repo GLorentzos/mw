@@ -20,7 +20,7 @@
   border: 0;
   list-style: none;
 }
-body {
+/* body {
   user-select: none;
   font-family: Inter;
   background: url('../img/background.jpg');
@@ -28,8 +28,18 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   cursor: url('../cursor/normal.cur'), default;
+} */
+body {
+  user-select: none;
+  font-family: Inter;
+  background-color: #942f2f;
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #942f2f 40px ), repeating-linear-gradient( #75272755, #752727 );
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  cursor: url('../cursor/normal.cur'), default;
 }
-
 /********** NAVBAR **********/
 .navbar {
   width: 100%;
