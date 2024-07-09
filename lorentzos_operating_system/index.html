@@ -1,0 +1,243 @@
+<html lang="en">
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>lorentzos os</title>
+      <link rel="stylesheet" href="static/css/operating_system.css" />
+      <link rel="icon" href="icon/mwlogoheader.webp" type="image/x-icon" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+         rel="stylesheet"
+         />
+      <link
+         rel="stylesheet"
+         href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+         crossorigin="anonymous"
+         />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100&display=swap"
+         rel="stylesheet"
+         />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+         rel="stylesheet"
+         />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
+         rel="stylesheet"
+         />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+         rel="stylesheet"
+         />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap"
+         rel="stylesheet"
+         />
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   </head>
+   <body onload="startTime()">
+    <style>
+      .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.iconloader {
+    width: 100px;
+    height: 100px;
+    background: url('static/img/preloader.svg') no-repeat center center;
+    background-size: contain;
+}
+
+    </style>
+    <div class="preloader">
+      <div class="iconloader"></div>
+   </div>
+      <div class="navbar">
+         <ul>
+         </ul>
+         <ul class="navbar__right">
+            <li>
+               <svg width="24" height="24">
+                  <path d="M12 6c3.537 0 6.837 1.353 9.293 3.809l1.414-1.414C19.874 5.561 16.071 4 12 4 7.929 4.001 4.126 5.561 1.293 8.395l1.414 1.414C5.163 7.353 8.463 6 12 6zM17.671 14.307c-3.074-3.074-8.268-3.074-11.342 0l1.414 1.414c2.307-2.307 6.207-2.307 8.514 0L17.671 14.307z"></path>
+                  <path d="M20.437,11.293c-4.572-4.574-12.301-4.574-16.873,0l1.414,1.414c3.807-3.807,10.238-3.807,14.045,0L20.437,11.293z"></path>
+                  <circle cx="12" cy="18" r="2"></circle>
+               </svg>
+            </li>
+            <li class="hidden">GR</li>
+            <li class="clock">
+               <span id="date" class="hidden"></span>
+               <span id="txt"></span>
+            </li>
+         </ul>
+      </div>
+      <div class="menu">
+         <ul class="earth">
+            <li  class="icon" id="openWebsite">
+               <img src="static/img/mwapp.png" alt="Finder Logo" />
+            </li>
+            <li  class="icon" id="openKeybinds">
+               <img src="static/img/keybinds.png" alt="Keybinds Logo" />
+            </li>
+            <li  class="icon" id="openJobs">
+               <img src="static/img/jobs.png" alt="Jobs Logo" />
+            </li>
+            <li class="icon">
+               <img
+                  class="opening"
+                  src="static/img/mwai.png"
+                  alt="mwai Logo"
+                  />
+            </li>
+            <li class="hidden"/>
+         </ul>
+      </div>
+      <style>
+         #draggable {
+         background-color: #f0f0f000;
+         position: absolute;
+         }
+         .window__taskbar {
+         background-color: #1783db00;
+         color: white;
+         cursor: move;
+         user-select: none; 
+         }
+         ::-webkit-scrollbar {
+         width: 0;
+         }
+         html {
+         scrollbar-width: none;
+         -ms-overflow-style: none; 
+         }
+      </style>
+      <div class="container" id="draggable">
+         <style>
+            .content{
+            overflow: auto;
+            resize: both;
+            }
+         </style>
+         <div class="window mwai" style="height: auto;"  id="header">
+            <div class="window__taskbar">
+               <div class="window__taskbar--actions">
+                  <button class="close"></button>
+               </div>
+               <div class="window__taskbar--content">
+                  <h2>MW AI</h2>
+               </div>
+            </div>
+            <div class="content" style="height: 596px; width: 1057px;">
+               <iframe src="lorentzos_ai.html" frameborder="0" class="web-iframe"></iframe>
+            </div>
+         </div>
+         <div class="window web" style="height: auto;"  id="header">
+            <div class="window__taskbar">
+               <div class="window__taskbar--actions">
+                  <button class="close-web"></button>
+               </div>
+               <div class="window__taskbar--content">
+                  <h2>RULES</h2>
+               </div>
+            </div>
+            <div class="content" style="height: 596px; width: 1057px;">
+               <iframe src="rules.html" frameborder="0" class="web-iframe"></iframe>
+            </div>
+         </div>
+         <div class="window keybinds" style="height: auto;"  id="header">
+            <div class="window__taskbar">
+               <div class="window__taskbar--actions">
+                  <button class="close-keybinds"></button>
+               </div>
+               <div class="window__taskbar--content">
+                  <h2>KEYBINDS</h2>
+               </div>
+            </div>
+            <div class="content" style="height: 596px; width: 1057px;">
+               <iframe src="keybinds.html" frameborder="0" class="web-iframe"></iframe>
+            </div>
+         </div>
+         <div class="window jobs" style="height: auto;"  id="header">
+            <div class="window__taskbar">
+               <div class="window__taskbar--actions">
+                  <button class="close-jobs"></button>
+               </div>
+               <div class="window__taskbar--content">
+                  <h2>JOBS</h2>
+               </div>
+            </div>
+            <div class="content" style="height: 596px; width: 1057px;">
+               <iframe src="jobs.html" frameborder="0" class="web-iframe"></iframe>
+            </div>
+         </div>
+      </div>
+      </div>
+      <script src="static/js/operating_system.js"></script>
+      <script>
+         document.querySelectorAll('.window__taskbar').forEach(header => {
+             const draggable = header.closest('.container');
+         
+             let offsetX, offsetY;
+         
+             header.addEventListener('mousedown', (e) => {
+                 offsetX = e.clientX - draggable.offsetLeft;
+                 offsetY = e.clientY - draggable.offsetTop;
+                 document.addEventListener('mousemove', mouseMoveHandler);
+                 document.addEventListener('mouseup', mouseUpHandler);
+             });
+         
+             function mouseMoveHandler(e) {
+                 draggable.style.left = `${e.clientX - offsetX}px`;
+                 draggable.style.top = `${e.clientY - offsetY}px`;
+             }
+         
+             function mouseUpHandler() {
+                 document.removeEventListener('mousemove', mouseMoveHandler);
+                 document.removeEventListener('mouseup', mouseUpHandler);
+             }
+         });
+      </script>
+      <script>
+         var d = new Date()
+         document.getElementById('date').innerHTML = d.toDateString()
+      </script>
+      <script>
+         function startTime() {
+           var today = new Date()
+           var h = today.getHours()
+           var m = today.getMinutes()
+           var s = today.getSeconds()
+           m = checkTime(m)
+           s = checkTime(s)
+           document.getElementById('txt').innerHTML = h + ':' + m + ':' + s
+           var t = setTimeout(startTime, 1000)
+         }
+         function checkTime(i) {
+           if (i < 10) {
+             i = '0' + i
+           } 
+           return i
+         }
+      </script>
+   </body>
+</html>
