@@ -85,6 +85,9 @@
          color: white;
          font-size: 14px;
          }
+         .inner-box{
+            cursor: pointer;
+         }
       </style>
    </head>
    <body class="dark-layout" style="image-rendering: pixelated;">
@@ -180,39 +183,42 @@
                     height: 10px;
                 }
             }
+
+            
            </style>
            <section class="main-bg-site-section">
               <div class="image-layer first-layer" style="background-image:url(images/background.jpg)"></div>
               <div class="image-layer2 second-layer" style="background-image:url(images/footer-bg.jpg)"></div>
            </section>
+
          <section class="about-section-two" style="margin-top:-70px;">
             <div class="auto-container">
                <div class="platforms" style="margin-bottom:-20px;">
                   <div class="row clearfix">
                      <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0ms">
-                        <div class="inner-box">
-                           <div class="icon-box"><span style="color:#f92d2d" class="fas fa-heartbeat"></span></div>
+                        <div class="inner-box" onclick="general()">
+                           <div class="icon-box"><span style="color:#f92d2d" class="fas fa-book"></span></div>
                            <div class="inner">
-                              <span class="upper-span">ΕΝΕΡΓΑ STAFF</span>
-                              <span class="lower-span">24 / 7 ONLINE</span>
+                              <span class="upper-span">Mostwanted©<br></span>
+                              <span class="lower-span">General Rules</span>
                            </div>
                         </div>
                      </div>
                      <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="900ms">
-                        <div class="inner-box">
-                           <div class="icon-box"><span style="color:#f92d2d" class="fas fa-user"></span></div>
+                        <div class="inner-box" onclick="police()">
+                           <div class="icon-box"><span style="color:#f92d2d" class="fas fa-book"></span></div>
                            <div class="inner">
-                              <span class="upper-span">ΜΟΝΑΔΙΚΑ</span>
-                              <span class="lower-span">ΕΠΑΓΓΕΛΜΑΤΑ</span>
+                              <span class="upper-span">Mostwanted©<br></span>
+                              <span class="lower-span">Police Rules</span>
                            </div>
                         </div>
                      </div>
                      <div class="platofrm-block col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="600ms">
-                        <div class="inner-box">
-                           <div class="icon-box"><span style="color:#f92d2d" class="fas fa-network-wired"></span></div>
+                        <div class="inner-box" onclick="criminal()">
+                           <div class="icon-box"><span style="color:#f92d2d;" class="fas fa-book"></span></div>
                            <div class="inner">
-                              <span class="upper-span">ΙΣΧΥΡΗ DDOS</span>
-                              <span class="lower-span">ΠΡΟΣΤΑΣΙΑ</span>
+                              <span class="upper-span">Mostwanted©<br></span>
+                              <span class="lower-span">Criminal Rules</span>
                            </div>
                         </div>
                      </div>
@@ -222,7 +228,7 @@
          <div class="mid-row">
          <div class="auto-container">
          <div class="row clearfix">
-         <div class="text-col col-lg-6 col-md-12 wow fadeInLeft" data-wow-duration="2000ms" data-wow-delay="0ms" style="margin-top:-60px">
+         <div class="text-col col-md-12 wow fadeInLeft" data-wow-duration="2000ms" data-wow-delay="0ms" style="margin-top:-60px">
          <div class="inner">
          <div id="general">
          <div class="sec-title">
@@ -449,9 +455,9 @@
          <div class="image-col col-lg-6 col-md-12 wow fadeInRight" data-wow-duration="2000ms" data-wow-delay="0ms">
          <div class="inner">
          <div class="images clearfix">
-         <a style="background: #fb381e;" onclick="general()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">General Rules</span></span></a>
+         <!-- <a style="background: #fb381e;" onclick="general()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">General Rules</span></span></a>
          <a style="background: #3885fa;" onclick="police()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">Police Rules</span></span></a><br/>
-         <a style="background: #211157;" onclick="criminal()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">Criminal Rules</span></span></a>
+         <a style="background: #211157;" onclick="criminal()" class="theme-btn btn-style-one"><span class="btn-title" style="width:264px;text-align:left"><i class="btn-icon"></i> <span class="btn-text">Criminal Rules</span></span></a> -->
          </div>
          </div>
          </div>
